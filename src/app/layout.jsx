@@ -4,12 +4,12 @@ import logo from '@/images/logomini.png';
 
 export const metadata = {
   title: {
-    template: '%s - Their Side',
+    template: '%s - Zdrowo Aktywni',
     default:
-      'Their Side - Conversations with the most tragically misunderstood people of our time',
+      'Zdrowo Aktywni',
   },
   description:
-    'Conversations with the most tragically misunderstood people of our time.',
+    'Zdrowo Aktywni',
 }
 
 const navigation = [
