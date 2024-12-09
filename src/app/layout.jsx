@@ -1,5 +1,6 @@
 import '@/styles/tailwind.css'
 import Footer from '@/components/footer'
+import Head from 'next/head'
 
 export const metadata = {
   title: {
@@ -14,7 +15,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pl" className="h-full bg-white antialiased">
-      <head></head>
+      <Head>
+        <title>{metadata.title.default}</title>
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <body className="min-h-full">
         <div className="w-full">
           {children}
