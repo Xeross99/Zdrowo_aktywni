@@ -1,12 +1,12 @@
 import '@/styles/tailwind.css'
-import Footer from '@/components/footer'
+import Footer from '@/components/Footer'
 import Head from 'next/head'
 
 export const metadata = {
   title: {
     template: '%s - Zdrowo Aktywni',
     default:
-      'Zdrowo Aktywni',
+      'Zdrowo Aktywni - Aleksandra Kost',
   },
   description:
     'Zdrowo Aktywni - Aleksandra Kost',

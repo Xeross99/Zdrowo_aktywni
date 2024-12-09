@@ -1,8 +1,9 @@
-import Image from 'next/image';
-import img1 from '@/images/sport/img1.jpg';
-import img2 from '@/images/sport/img2.jpg';
-import img3 from '@/images/sport/img3.jpg';
-import img4 from '@/images/sport/img4.jpg';
+import Image from 'next/image'
+import { FadeIn } from '@/components/FadeIn'
+import img1 from '@/images/sport/img1.jpg'
+import img2 from '@/images/sport/img2.jpg'
+import img3 from '@/images/sport/img3.jpg'
+import img4 from '@/images/sport/img4.jpg'
 
 export default function Home() {
   return (
@@ -22,17 +23,25 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
             <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
-              <Image src={img1} alt="" className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"/>
+              <FadeIn>
+                <Image src={img1} alt="Zdjęcie 1" className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover" />
+              </FadeIn>
             </div>
             <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
               <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
-                <Image src={img4} alt="" className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"/>
+                <FadeIn>
+                  <Image src={img4} alt="Zdjęcie 4" className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover" />
+                </FadeIn>
               </div>
               <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
-                <Image src={img3} alt="" className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover object-top"/>
+                <FadeIn>
+                  <Image src={img3} alt="Zdjęcie 3" className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover object-top" />
+                </FadeIn>
               </div>
               <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
-                <Image src={img2} alt="" className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"/>
+                <FadeIn>
+                  <Image src={img2} alt="Zdjęcie 2" className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover" />
+                </FadeIn>
               </div>
             </div>
           </div>
