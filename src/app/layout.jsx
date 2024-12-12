@@ -5,11 +5,9 @@ import Head from 'next/head'
 export const metadata = {
   title: {
     template: '%s - Zdrowo Aktywni',
-    default:
-      'Zdrowo Aktywni - Aleksandra Kost',
+    default: 'Zdrowo Aktywni - Aleksandra Kost',
   },
-  description:
-    'Zdrowo Aktywni - Aleksandra Kost',
+  description: 'Znajdź inspiracje do zdrowego życia i aktywności fizycznej dzięki Zdrowo Aktywni.',
 }
 
 export default function RootLayout({ children }) {
@@ -18,7 +16,7 @@ export default function RootLayout({ children }) {
       <Head>
         <title>{metadata.title.default}</title>
         <meta name="description" content={metadata.description} />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="apple-mobile-web-app-title" content="Zdrowo Aktywni" />
       </Head>
       <body className="min-h-full">
         <div className="w-full">
