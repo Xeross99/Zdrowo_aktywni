@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import logo from '@/images/logomini.png';
 
+const currentYear = new Date().getFullYear()
 const navigation = [
   {
     name: 'Facebook',
@@ -61,7 +62,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 md:order-1 md:mt-0 relative">
           <p className="text-center text-xs leading-5 text-gray-500">
-            &copy; 2024 Zdrowo-Aktywni. Wszelkie prawa zastrzeżone.
+            &copy; {currentYear} Zdrowo-Aktywni. Wszelkie prawa zastrzeżone.
           </p>
           <p className="text-center text-xs leading-5 text-gray-500">
             Wykonano przez <a href='https://github.com/Xeross99' target='_blank' rel="noreferrer" className='hover:underline'>Michała Krzysteczko</a>
