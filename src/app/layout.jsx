@@ -10,9 +10,7 @@ export const metadata = {
   author: 'Aleksandra Kost',
   creator: 'Michał Krzysteczko',
   alternates: {
-    types: {
-      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
-    },
+    sitemap: `https://zdrowo-aktywni.pl/sitemap.xml`
   },
 }
 
