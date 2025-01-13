@@ -6,7 +6,7 @@ import { Container } from '@/components/Container'
 import { InstagramIcon, FacebookIcon, StravaIcon, TikTokIcon, MailIcon } from '@/components/Icons'
 import portraitImage from '@/images/sport/img3.jpg'
 
-function SocialLink({ className, href, children, icon: Icon }) {
+export function SocialLink({ className, href, children, icon: Icon }) {
   return (
     <li className={clsx(className, 'flex')}>
       <Link href={href} target="_blank" className="group flex text-sm font-medium text-zinc-800 transition hover:text-lime-500">
@@ -22,9 +22,9 @@ export const metadata = {
   description: 'Nazywam się Aleksandra Kost, inspiruję do zdrowych zmian i lepszej przyszłości',
 }
 
-export default function About() {
+export default function OMnie() {
   return (
-    <Container className="mt-16 sm:mt-32 pb-16 sm:pb-32">
+    <Container className="pt-16 sm:pt-32 pb-16 sm:pb-32 bg-white">
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
         <div className="lg:pl-20">
           <div className="max-w-xs px-2.5 lg:max-w-none">
