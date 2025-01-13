@@ -63,7 +63,7 @@ function NavItem({ href, children }) {
     <li>
       <Link href={href} className={clsx('relative block px-3 py-2 transition', isActive? 'text-lime-600' : 'hover:text-lime-600')}>
         {children}
-        {isActive && (<span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-lime-600/0 via-lime-600/40 to-lime-600/0" />)}
+        {isActive && (<span className="absolute inset-x-1 -bottom-px h-0.5 bg-gradient-to-r from-lime-600/0 via-lime-600/40 to-lime-600/0" />)}
       </Link>
     </li>
   )
@@ -72,7 +72,8 @@ function NavItem({ href, children }) {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur text-nowrap">
+      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1
+        ring-zinc-900/5 backdrop-blur text-nowrap">
         <NavItem href="/o-mnie">O mnie</NavItem>
         <NavItem href="/zdrowo-aktywni">Zdrowo Aktywni</NavItem>
         <NavItem href="/blog">Blog</NavItem>
