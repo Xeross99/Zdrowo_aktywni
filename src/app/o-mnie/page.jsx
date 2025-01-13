@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-
+import { FadeIn, FadeInStagger } from "@/components/FadeIn"
 import { Container } from '@/components/Container'
 import { InstagramIcon, FacebookIcon, StravaIcon, TikTokIcon, MailIcon } from '@/components/Icons'
 import portraitImage from '@/images/sport/img3.jpg'
@@ -25,8 +25,8 @@ export const metadata = {
 export default function OMnie() {
   return (
     <Container className="pt-16 sm:pt-32 pb-16 sm:pb-32 bg-white">
-      <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-        <div className="lg:pl-20">
+      <FadeInStagger className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+        <FadeIn className="lg:pl-20">
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
               src={portraitImage}
@@ -35,7 +35,7 @@ export default function OMnie() {
               className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover"
             />
           </div>
-        </div>
+        </FadeIn>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
             Nazywam się Aleksandra Kost, Inspiruję do zdrowych zmian i lepszej przyszłości
@@ -73,7 +73,7 @@ export default function OMnie() {
             </p>
           </div>
         </div>
-        <div className="lg:pl-20">
+        <FadeIn className="lg:pl-20">
           <ul role="list">
             <SocialLink href="https://www.facebook.com/aleksandra.kost.90" icon={FacebookIcon}>
               Facebook
@@ -91,8 +91,8 @@ export default function OMnie() {
               zdrowoaktywnii@gmail.com
             </SocialLink>
           </ul>
-        </div>
-      </div>
+        </FadeIn>
+      </FadeInStagger>
     </Container>
   )
 }

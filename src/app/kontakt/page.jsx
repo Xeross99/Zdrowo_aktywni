@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import clsx from 'clsx'
 
+import { FadeIn, FadeInStagger } from "@/components/FadeIn"
 import { Container } from '@/components/Container'
 import { InstagramIcon, FacebookIcon, StravaIcon, TikTokIcon } from '@/components/Icons'
 
@@ -30,16 +31,16 @@ export default function Kontakt() {
               <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900">Skontaktuj się ze mną</h2>
               <p className="mt-4 text-base/7 text-gray-600">Czasem jeden mail lub telefon może zmienić wszystko. Nie czekaj, odezwij się!</p>
             </div>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
-              <div className="rounded-2xl bg-gray-50 p-10">
+            <FadeInStagger className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
+              <FadeIn className="rounded-2xl bg-gray-50 p-10">
                 <h3 className="text-base/7 font-semibold text-gray-900">Aleksandra Kost</h3>
                 <dl className="mt-3 space-y-1 text-sm/6 text-gray-600">
                   <div>
                     <dd>Niezależny partner biznesowy firmy LR Health&Beauty</dd>
                   </div>
                 </dl>
-              </div>
-              <div className="rounded-2xl bg-gray-50 p-10">
+              </FadeIn>
+              <FadeIn className="rounded-2xl bg-gray-50 p-10">
                 <h3 className="text-base/7 font-semibold text-gray-900">Email</h3>
                 <dl className="mt-3 space-y-1 text-sm/6 text-gray-600">
                   <div>
@@ -47,8 +48,8 @@ export default function Kontakt() {
                     <dd><a className="font-semibold text-lime-600" href="mailto:zdrowoaktywnii@gmail.com">zdrowoaktywnii@gmail.com</a></dd>
                   </div>
                 </dl>
-              </div>
-              <div className="rounded-2xl bg-gray-50 p-10">
+              </FadeIn>
+              <FadeIn className="rounded-2xl bg-gray-50 p-10">
                 <h3 className="text-base/7 font-semibold text-gray-900">Telefon</h3>
                 <dl className="mt-3 space-y-1 text-sm/6 text-gray-600">
                   <div>
@@ -56,8 +57,8 @@ export default function Kontakt() {
                     <dd><a className="font-semibold text-lime-600" href="tel:604371921">+48 604 371 921</a></dd>
                   </div>
                 </dl>
-              </div>
-              <div className="rounded-2xl bg-gray-50 p-10">
+              </FadeIn>
+              <FadeIn className="rounded-2xl bg-gray-50 p-10">
                 <h3 className="text-base/7 font-semibold text-gray-900">Social media</h3>
                 <dl className="mt-3 space-y-1 text-sm/6 text-gray-600">
                   <dd>
@@ -69,8 +70,8 @@ export default function Kontakt() {
                     </ul>
                   </dd>
                 </dl>
-              </div>
-            </div>
+              </FadeIn>
+            </FadeInStagger>
           </div>
         </div>
       </div>
