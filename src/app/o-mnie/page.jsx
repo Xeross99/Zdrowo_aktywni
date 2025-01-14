@@ -44,29 +44,29 @@ export default function OMnie() {
             <p>
               Jako absolwentka Akademii Wychowania
               Fizycznego w Katowicach łączę wiedzę i pasję, by inspirować ludzi
-              do pozytywnych zmian. Wierzę, że wszystko zaczyna się od nawyków –
+              do pozytywnych zmian. Wierzę, że wszystko zaczyna się od nawyków -
               małych, konsekwentnych kroków prowadzących do wielkich rezultatów.
             </p>
             <p>
               Moim celem jest prowadzenie ludzi w kierunku zdrowszego, pełniejszego
-              życia – pokazuję im, jak dobre nawyki, konsekwencja i dyscyplina mogą
+              życia - pokazuję im, jak dobre nawyki, konsekwencja i dyscyplina mogą
               zmieniać rzeczywistość. Wierzę, że jednym z najważniejszych życiowych
               celów jest wykształcenie nawyków przynoszących zdrowie, szczęście i
               radość z każdego dnia.
             </p>
             <p>
-              Codziennie piję aloes i biegam co najmniej 5 kilometrów– robię to nie
+              Codziennie piję aloes i biegam co najmniej 5 kilometrów- robię to nie
               tylko dla zdrowia, ale dla lepszej jakości życia. Biorę odpowiedzialność
               za swoje życie,  zdrowie i przyszłość. Na Akademiach Zdrowia które powadzę,
               to przekazuję innym.  Jestem himalaistką, triathlonistką, maratończykiem.
-              Wiele jeszcze przede mną. Nowe wyzwania – traktuję jako szansę na rozwój i
-              przełamywanie własnych granic.
+              Wiele jeszcze przede mną. Nowe wyzwania - traktuję jako szansę na rozwój
+              i przełamywanie własnych granic.
             </p>
             <p>
-              Uważam, że każdy ma w sobie potencjał do wielkich rzeczy – potrzebuje jedynie
-              wsparcia, inspiracji i odpowiednich narzędzi. To właśnie staram się robić w
-              swojej pracy, dzieląc się wiedzą jako nauczyciel, dietetyk,  instruktor czy
-              trener.Poza pracą inwestuję w siebie i swoją rodzinę. Kocham książki, górskie
+              Uważam, że każdy ma w sobie potencjał do wielkich rzeczy - potrzebuje jedynie
+              wsparcia, inspiracji i odpowiednich narzędzi. To właśnie staram się robić
+              w swojej pracy, dzieląc się wiedzą jako nauczyciel, dietetyk,  instruktor czy
+              trener. Poza pracą inwestuję w siebie i swoją rodzinę. Kocham książki, górskie
               wędrówki, dobre jedzenie i ludzi. Moje marzenia? Hm… Główny Szlak Beskidzki,
               zdobycie maratonów stolic Europy, niezależność finansowa, ale przede wszystkim
               – zdrowie, szczęście oraz dzielenie się swoją pozytywną energią z innymi.
