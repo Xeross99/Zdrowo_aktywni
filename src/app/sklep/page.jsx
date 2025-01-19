@@ -119,17 +119,35 @@ const products = [
 
 export default function Sklep() {
   return (
-    <Container className="mb-16 sm:mb-32 pb-16 sm:pb-32">
+    <Container className="mt-16 sm:mt-32 pb-16 sm:pb-32">
       <div className="bg-white py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <p className="text-base/7 font-semibold text-lime-600">Sklep</p>
             <h2 className="mt-2 text-5xl font-medium tracking-tight text-gray-900 sm:text-5xl">Zakupy tylko w programie partnerskim</h2>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-              czyli aktywacja konta bezpośrednio u producenta, cieszy się zawsze najlepszą ceną i jest jedyną gwarancją oryginalności produktu. 
+              aktywacja konta bezpośrednio u producenta, cieszy się zawsze najlepszą ceną i jest jedyną gwarancją oryginalności produktu. 
             </p>
           </div>
         </div>
+      </div>
+
+      <div className="bg-white">
+        <FadeInStagger className="mx-auto max-w-2xl px-4 py-16 sm:px-6 lg:max-w-7xl lg:px-8">
+          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+            {products.map((product) => (
+              <FadeIn key={product.id}>
+                <Link key={product.id} href={product.href} className="group">
+                  <Image alt='' src={product.imageSrc} loading="lazy"
+                    className="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
+                  />
+                  <p className="mt-4 text-lg font-medium text-gray-900">{product.title}</p>
+                  <h3 className="mt-1 text-sm text-gray-700">{product.description}</h3>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </FadeInStagger>
       </div>
       <FadeIn className="bg-white">
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
@@ -151,7 +169,7 @@ export default function Sklep() {
                 Poniższa witryna zawiera wyselekcjonowane produkty firmy LR Health&Beauty. Pełen katalog produktów, znajduje się w zakładce „Sklep”
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-                <Link href="https://shop.lrworld.com/cms/PL/pl/?casrnc=a2409" target='_top'
+                <Link href="https://shop.lrworld.com/cms/PL/pl/?casrnc=a2409" target='_blank'
                   className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100
                   focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
                   Sklep
@@ -173,30 +191,6 @@ export default function Sklep() {
           </div>
         </div>
       </FadeIn>
-      <div className="bg-white">
-        <FadeInStagger className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-          <div className="max-w-3xl mb-6">
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Zdrowie i energia na co dzień</h2>
-            <p className="mt-2 text-gray-500">
-            Inspiracja do dbania o zdrowie poprzez regularne kuracje
-            </p>
-          </div>
-        
-          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            {products.map((product) => (
-              <FadeIn key={product.id}>
-                <Link key={product.id} href={product.href} className="group">
-                  <Image alt='' src={product.imageSrc} loading="lazy"
-                    className="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
-                  />
-                  <p className="mt-4 text-lg font-medium text-gray-900">{product.title}</p>
-                  <h3 className="mt-1 text-sm text-gray-700">{product.description}</h3>
-                </Link>
-              </FadeIn>
-            ))}
-          </div>
-        </FadeInStagger>
-      </div>
       <div className="bg-white">
         <div className="mx-auto max-w-7xl divide-y divide-gray-900/10 px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
           <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Często zadawane pytania</h2>
