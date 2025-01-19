@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import { FadeIn, FadeInStagger } from "@/components/FadeIn"
 import { Container } from '@/components/Container'
-import kuracjaPodstawowa from '@/images/sklep/kuracja_podstawowa.jpg'
+import kuracjaPodstawowa from '@/images/sklep/kuracja_podstawowa.JPG'
 import aparatRuchu from '@/images/sklep/aparat_ruchu.jpg'
 import kuracjaOdpornosciowa from '@/images/sklep/kuracja_odpornosciowa.jpg'
 import kuracjaMetaboliczna from '@/images/sklep/kuracja_metaboliczna.jpg'
