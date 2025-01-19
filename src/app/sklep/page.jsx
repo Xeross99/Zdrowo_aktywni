@@ -25,7 +25,7 @@ const faqs = [
           <li>Dostęp do ponad 400 produktów dla zdrowia i urody w cenie producenta.</li>
           <li>Wysokie rabaty.</li>
           <li>
-            Unikalny Plan na Zdrowie – subskrypcja na żele do picia Aloe Vera, Mind Master, Beauty Elixir oraz kurację metaboliczną, dzięki którym nabywacie Państwo produkty po wyjątkowo atrakcyjnej cenie, z bezpłatną dostawą i prezentem po każdych aktywnych 3 miesiącach subskrypcji. Wysyłka przez firmę jest wykonywana automatycznie.
+            Unikalny Plan na Zdrowie - subskrypcja na żele do picia Aloe Vera, Mind Master, Beauty Elixir oraz kurację metaboliczną, dzięki którym nabywacie Państwo produkty po wyjątkowo atrakcyjnej cenie, z bezpłatną dostawą i prezentem po każdych aktywnych 3 miesiącach subskrypcji. Wysyłka przez firmę jest wykonywana automatycznie.
           </li>
           <li>Dostęp do dodatkowych promocji.</li>
           <li>Bezpłatną poradę dietetyka w zakresie wsparcia zdrowia.</li>
@@ -184,7 +184,7 @@ export default function Sklep() {
         
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {products.map((product) => (
-              <FadeIn>
+              <FadeIn key={product.id}>
                 <Link key={product.id} href={product.href} className="group">
                   <Image alt='' src={product.imageSrc} loading="lazy"
                     className="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
