@@ -14,7 +14,7 @@ const products = [
     name: 'Aloe Vera Drinking Gel Active Freedom',
     href: 'https://shop.lrworld.com/product/pl/pl/aloe_vera_drinking_gel_active_freedom.html?productAlias=80850-683&casrnc=49eea',
     image: product_1,
-    price: '126,80 zł',
+    price: '126,80 zł',
     description:
       "Witamina C wspiera produkcję kolagenu dla prawidłowego funkcjonowania chrząstki i kości oraz pomaga utrzymać prawidłowy metabolizm energetyczny.\n" +
       "• Dla Twojego aparatu ruchu: wspiera prawidłowy metabolizm energetyczny oraz utrzymanie chrząstki i kości\n" +
@@ -30,7 +30,7 @@ const products = [
     name: 'LR LIFETAKT Liver Support',
     href: 'https://shop.lrworld.com/product/pl/pl/lr_lifetakt_liver_support.html?productAlias=81330-97&casrnc=8b58c',
     image: product_2,
-    price: '119,90 zł',
+    price: '119,90 zł',
     description:
       "Suplement diety wspiera detoksykację organizmu oraz ochronę komórek przed stresem oksydacyjnym.\n" +
       "• Wspiera wątrobę w procesie usuwania toksyn i detoksykacji organizmu\n" +
