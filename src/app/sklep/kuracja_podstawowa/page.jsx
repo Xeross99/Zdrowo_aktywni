@@ -10,6 +10,7 @@ import Image from 'next/image'
 
 const products = [
   {
+    id: 1,
     name: 'Aloe Vera Drinking Gel Active Freedom',
     href: 'https://shop.lrworld.com/product/pl/pl/aloe_vera_drinking_gel_active_freedom.html?productAlias=80850-683&casrnc=49eea',
     image: product_1,
@@ -25,6 +26,7 @@ const products = [
     ]
   },
   {
+    id: 2,
     name: 'LR LIFETAKT Liver Support',
     href: 'https://shop.lrworld.com/product/pl/pl/lr_lifetakt_liver_support.html?productAlias=81330-97&casrnc=8b58c',
     image: product_2,
@@ -43,7 +45,7 @@ export default function KuracjaPodstawowa() {
   return (
     <Container className="mt-16 sm:mt-32 pb-16 sm:pb-32">
       {products.map((product) => (
-        <FadeInStagger className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 last:-mt-20">
+        <FadeInStagger key={product.id} className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 last:-mt-20">
           <div className="lg:max-w-lg lg:self-end">
             <nav aria-label="Breadcrumb">
               <ol role="list" className="flex items-center space-x-2">
