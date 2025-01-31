@@ -83,35 +83,35 @@ const products = [
   {
     id: 1,
     description: 'Podstawa dobrego samopoczucia na co dzień.',
-    href: '#',
+    href: 'sklep/kuracja_podstawowa',
     title: 'Kuracja podstawowa',
     imageSrc: kuracjaPodstawowa,
   },
   {
     id: 2,
     description: 'Wsparcie dla zdrowych i elastycznych stawów.',
-    href: '#',
+    href: 'sklep/aparat_ruchu',
     title: "Aparat ruchu",
     imageSrc: aparatRuchu,
   },
   {
     id: 3,
     description: 'Wzmocnij swoją odporność naturalnie.',
-    href: '#',
+    href: 'sklep/kuracja_odpornosciowa',
     title: 'Kuracja odpornościowa',
     imageSrc: kuracjaOdpornosciowa,
   },
   {
     id: 4,
     description: 'Zadbaj o swój metabolizm i energię.',
-    href: '#',
+    href: 'sklep/kuracja_metaboliczna',
     title: 'Kuracja metaboliczna',
     imageSrc: kuracjaMetaboliczna,
   },
   {
     id: 5,
     description: 'Zadbaj o swój metabolizm i energię.',
-    href: '#',
+    href: 'sklep/body_mission',
     title: 'Program LR Body Mission',
     imageSrc: bodyMission,
   },
@@ -171,7 +171,7 @@ export default function Sklep() {
               <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
                 <Link href="https://shop.lrworld.com/cms/PL/pl/?casrnc=a2409" target='_blank'
                   className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100
-                  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
                   Sklep
                 </Link>
                 <span className="text-sm/6 font-semibold text-white">
@@ -192,14 +192,14 @@ export default function Sklep() {
         </div>
       </FadeIn>
       <div className="bg-white">
-        <div className="mx-auto max-w-7xl divide-y divide-gray-900/10 px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
           <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Często zadawane pytania</h2>
-          <dl className="mt-10 space-y-8 divide-y divide-gray-900/10">
+          <dl className="mt-20 divide-y divide-gray-900/10">
             {faqs.map((faq) => (
-              <FadeInStagger key={faq.id} className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+              <FadeInStagger key={faq.id} className="py-8 first:pt-0 last:pb-0 lg:grid lg:grid-cols-12 lg:gap-8">
                 <dt className="text-base/7 font-semibold text-gray-900 lg:col-span-5">{faq.question}</dt>
-                <dd className="mt-4 lg:col-span-7 lg:mt-0 text-base/7 text-gray-600">
-                  <FadeIn>{faq.answer}</FadeIn>
+                <dd className="mt-4 lg:col-span-7 lg:mt-0">
+                  <FadeIn className="text-base/7 text-gray-600">{faq.answer}</FadeIn>
                 </dd>
               </FadeInStagger>
             ))}
