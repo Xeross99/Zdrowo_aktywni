@@ -1,4 +1,5 @@
 import '@/styles/tailwind.css'
+import Footer from '@/components/Footer'
 import { Navbar } from '@/components/Navbar'
 
 export const metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <div className="w-full">
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   )
