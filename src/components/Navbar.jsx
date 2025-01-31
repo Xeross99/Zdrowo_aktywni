@@ -23,16 +23,16 @@ function MobileNavItem({ href, children }) {
 function MobileNavigation(props) {
   return (
     <Popover {...props}>
-      <PopoverButton className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur">
+      <PopoverButton className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur-sm">
         Menu
         <ChevronDownIcon className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700" />
       </PopoverButton>
       <PopoverBackdrop
         transition
-        className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm duration-150 data-[closed]:opacity-0 data-[enter]:ease-out data-[leave]:ease-in"
+        className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-xs duration-150 data-closed:opacity-0 data-enter:ease-out data-leave:ease-in"
       />
       <PopoverPanel focus transition className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8
-        ring-1 ring-zinc-900/5 duration-150 data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:ease-out data-[leave]:ease-in">
+        ring-1 ring-zinc-900/5 duration-150 data-closed:scale-95 data-closed:opacity-0 data-enter:ease-out data-leave:ease-in">
         <div className="flex flex-row-reverse items-center justify-between">
           <PopoverButton aria-label="Close menu" className="-m-1 p-1">
             <CloseIcon className="h-6 w-6 text-zinc-500" />
@@ -63,7 +63,7 @@ function NavItem({ href, children }) {
     <li>
       <Link href={href} className={clsx('relative block px-3 py-2 transition', isActive? 'text-lime-600' : 'hover:text-lime-600')}>
         {children}
-        {isActive && (<span className="absolute inset-x-1 -bottom-px h-0.5 bg-gradient-to-r from-lime-600/0 via-lime-600/40 to-lime-600/0" />)}
+        {isActive && (<span className="absolute inset-x-1 -bottom-px h-0.5 bg-linear-to-r from-lime-600/0 via-lime-600/40 to-lime-600/0" />)}
       </Link>
     </li>
   )
@@ -96,7 +96,7 @@ function AvatarContainer({ className, ...props }) {
     <div
       className={clsx(
         className,
-        'size-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur',
+        'size-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur-sm',
       )}
       {...props}
     />
@@ -223,9 +223,9 @@ export function Navbar() {
       <header className="pointer-events-none relative z-50 flex flex-none flex-col" style={{height: 'var(--header-height)', marginBottom: 'var(--header-mb)'}}>
         {isHomePage && (
           <>
-            <div ref={avatarRef} className="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]" />
+            <div ref={avatarRef} className="order-last mt-[calc(--spacing(16)-(--spacing(3)))]" />
             <Container className="top-0 order-last -mb-3 pt-3" style={{position: 'var(--header-position)'}}>
-              <div className="top-[var(--avatar-top,theme(spacing.3))] w-full" style={{ position: 'var(--header-inner-position)'}} >
+              <div className="top-(--avatar-top,--spacing(3)) w-full" style={{ position: 'var(--header-inner-position)'}} >
                 <div className="relative">
                   <AvatarContainer className="absolute left-0 top-3 origin-left transition-opacity" style={{opacity: 'var(--avatar-border-opacity, 0)', transform: 'var(--avatar-border-transform)'}}/>
                   <Avatar large className="block size-16 origin-left" style={{ transform: 'var(--avatar-image-transform)' }} />
@@ -235,7 +235,7 @@ export function Navbar() {
           </>
         )}
         <div ref={headerRef} className="top-0 z-10 h-16 pt-6" style={{ position: 'var(--header-position)'}}>
-          <Container className="top-[var(--header-top,theme(spacing.6))] w-full" style={{ position: 'var(--header-inner-position)'}}>
+          <Container className="top-(--header-top,--spacing(6)) w-full" style={{ position: 'var(--header-inner-position)'}}>
             <div className="relative flex gap-4">
               <div className="flex flex-1">
                 {!isHomePage && (

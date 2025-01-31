@@ -60,7 +60,7 @@ const faqs = [
     answer: (
       <>
         Aby się zarejestrować,{" "}
-        <Link href="https://shop.lrworld.com/openpao?PHP=B3fP%2FWdScdGDz97DkJxoJw%3D%3D" target="_blank" className='inline-flex items-center gap-x-1.5 rounded-md bg-lime-600 px-2 py-1 text-sm font-semibold text-white shadow-sm hover:bg-lime-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-600'>
+        <Link href="https://shop.lrworld.com/openpao?PHP=B3fP%2FWdScdGDz97DkJxoJw%3D%3D" target="_blank" className='inline-flex items-center gap-x-1.5 rounded-md bg-lime-600 px-2 py-1 text-sm font-semibold text-white shadow-xs hover:bg-lime-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-600'>
           kliknij tutaj
         </Link>
         . Po aktywacji konta w LR Health & Beauty otrzymasz potwierdzenie rejestracji, dane do logowania oraz możliwość składania zamówień w dowolnym czasie, na dowolną kwotę.
@@ -139,7 +139,7 @@ export default function Sklep() {
               <FadeIn key={product.id}>
                 <Link key={product.id} href={product.href} className="group">
                   <Image alt='' src={product.imageSrc} loading="lazy"
-                    className="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
+                    className="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"
                   />
                   <p className="mt-4 text-lg font-medium text-gray-900">{product.title}</p>
                   <h3 className="mt-1 text-sm text-gray-700">{product.description}</h3>
