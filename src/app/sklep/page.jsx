@@ -124,9 +124,9 @@ export default function Sklep() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <p className="text-base/7 font-semibold text-lime-600">Sklep</p>
-            <h2 className="mt-2 text-5xl font-medium tracking-tight text-gray-900 sm:text-5xl">Zakupy tylko w programie partnerskim</h2>
+            <h2 className="mt-2 text-5xl font-medium tracking-tight text-gray-900 sm:text-5xl">Zakupy tylko w programie partnerskim</h2>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-              aktywacja konta bezpośrednio u producenta, cieszy się zawsze najlepszą ceną i jest jedyną gwarancją oryginalności produktu. 
+              Aktywacja konta bezpośrednio u producenta, cieszy się zawsze najlepszą ceną i jest jedyną gwarancją oryginalności produktu. 
             </p>
           </div>
         </div>
