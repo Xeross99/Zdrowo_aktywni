@@ -2,9 +2,9 @@
 
 import { Container } from '@/components/Container'
 import { CheckIcon, ShieldCheckIcon } from '@heroicons/react/24/solid'
-import { FadeIn, FadeInStagger } from "@/components/FadeIn"
-import product_1 from '@/images/sklep/kuracja_podstawowa/product_1.jpg'
-import product_2 from '@/images/sklep/kuracja_podstawowa/product_2.jpg'
+import { FadeIn } from "@/components/FadeIn"
+import aloe_vera from '@/images/sklep/kuracja_podstawowa/product_1.jpg'
+import liver_support from '@/images/sklep/kuracja_podstawowa/product_2.jpg'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -13,7 +13,7 @@ const products = [
     id: 1,
     name: 'Aloe Vera Drinking Gel Active Freedom',
     href: 'https://shop.lrworld.com/product/pl/pl/aloe_vera_drinking_gel_active_freedom.html?productAlias=80850-683&casrnc=49eea',
-    image: product_1,
+    image: aloe_vera,
     price: '126,80 zł',
     description:
       "Witamina C wspiera produkcję kolagenu dla prawidłowego funkcjonowania chrząstki i kości oraz pomaga utrzymać prawidłowy metabolizm energetyczny.\n" +
@@ -29,7 +29,7 @@ const products = [
     id: 2,
     name: 'LR LIFETAKT Liver Support',
     href: 'https://shop.lrworld.com/product/pl/pl/lr_lifetakt_liver_support.html?productAlias=81330-97&casrnc=8b58c',
-    image: product_2,
+    image: liver_support,
     price: '119,90 zł',
     description:
       "Suplement diety wspiera detoksykację organizmu oraz ochronę komórek przed stresem oksydacyjnym.\n" +
@@ -45,7 +45,7 @@ export default function KuracjaPodstawowa() {
   return (
     <Container className="mt-16 sm:mt-32 pb-16 sm:pb-32">
       {products.map((product) => (
-        <FadeInStagger key={product.id} className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 last:-mt-20">
+        <div key={product.id} className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 last:-mt-20">
           <div className="lg:max-w-lg lg:self-end">
             <nav aria-label="Breadcrumb">
               <ol role="list" className="flex items-center space-x-2">
@@ -65,10 +65,10 @@ export default function KuracjaPodstawowa() {
                 ))}
               </ol>
             </nav>
-            <FadeIn className="mt-4">
+            <div className="mt-4">
               <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{product.name}</h1>
-            </FadeIn>
-            <FadeIn aria-labelledby="information-heading" className="mt-4">
+            </div>
+            <div aria-labelledby="information-heading" className="mt-4">
               <h2 id="information-heading" className="sr-only">
                 Product information
               </h2>
@@ -87,10 +87,10 @@ export default function KuracjaPodstawowa() {
                 <CheckIcon aria-hidden="true" className="size-5 shrink-0 text-green-500" />
                 <p className="ml-2 text-sm text-gray-500">Dostępny na stronie LR</p>
               </div>
-            </FadeIn>
+            </div>
           </div>
           <FadeIn className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
-            <Image alt="" src={product.image} className="aspect-square w-full rounded-lg object-cover" />
+            <Image alt="" src={product.image} className="aspect-square w-full rounded-lg object-contain" />
           </FadeIn>
           <div className="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
             <section aria-labelledby="options-heading">
@@ -109,7 +109,7 @@ export default function KuracjaPodstawowa() {
                 </div>
             </section>
           </div>
-        </FadeInStagger>
+        </div>
       ))}
     </Container>
   )
