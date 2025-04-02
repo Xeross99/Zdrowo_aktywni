@@ -65,7 +65,7 @@ export default function Footer() {
             &copy; {currentYear} Zdrowo-Aktywni. Wszelkie prawa zastrzeżone.
           </p>
           <p className="text-center text-xs leading-5 text-gray-500">
-            Wykonano przez <a href='https://www.krzysteczko-m.pl' target='_blank' rel="noreferrer" className='hover:underline'>Michała Krzysteczko</a>
+            Wykonano przez <a href='https://www.krzysteczko-m.pl' target='_blank' rel="noreferrer" className='underline hover:text-gray-700'>Michała Krzysteczko</a>
           </p>
           <Image src={logo} alt="Zdrowo aktywni logo" width={128} height={128} 
             className="absolute md:-bottom-[80%] -bottom-[95%] left-1/2 -translate-x-1/2 opacity-20 md:w-20 w-32 pointer-events-none" />
