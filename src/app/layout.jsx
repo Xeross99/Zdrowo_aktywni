@@ -1,4 +1,5 @@
 import '@/styles/tailwind.css'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import Footer from '@/components/Footer'
 import { Navbar } from '@/components/Navbar'
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
         </div>
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-V65F7D42MS" />
     </html>
   )
 }
