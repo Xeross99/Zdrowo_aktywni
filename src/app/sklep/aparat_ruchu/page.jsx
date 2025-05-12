@@ -1,16 +1,19 @@
-'use client'
-
+import { FadeIn } from '@/components/FadeIn'
 import { Container } from '@/components/Container'
-import { CheckIcon, ShieldCheckIcon } from '@heroicons/react/24/solid'
-import { FadeIn } from "@/components/FadeIn"
-import colostrum from '@/images/sklep/aparat_ruchu/product_1.jpg'
-import omega from '@/images/sklep/aparat_ruchu/product_2.jpg'
-import protein from '@/images/sklep/aparat_ruchu/product_3.jpg'
-import vita_active from '@/images/sklep/aparat_ruchu/product_4.jpg'
-import msm from '@/images/sklep/aparat_ruchu/product_5.jpg'
-import aloe_vera from '@/images/sklep/kuracja_podstawowa/product_1.jpg'
+import { CheckIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import Image from 'next/image'
+import colostrum_liquid from '@/images/sklep/produkty/colostrum_liquid.jpg'
+import super_omega from '@/images/sklep/produkty/super_omega.jpg'
+import protein_power from '@/images/sklep/produkty/protein_power.jpg'
+import vita_active from '@/images/sklep/produkty/vita_active.jpg'
+import msm_body_gel from '@/images/sklep/produkty/msm_body_gel.jpg'
+import aloe_vera_active_freedom from '@/images/sklep/produkty/aloe_vera_active_freedom.jpg'
+
+export const metadata = {
+  title:       'Aparat ruchu',
+  description: 'Odkryj produkty wspierające zdrowie stawów, mięśni i odporności. Wybierz naturalne wsparcie dla swojego ciała i ciesz się aktywnym stylem życia każdego dnia!',
+}
 
 const breadcrumbs = [
   { id: 1, name: 'Sklep', href: '/sklep' },
@@ -22,9 +25,7 @@ const products = [
     id: 1,
     lr_id: '80361-599',
     name: 'Colostrum Liquid',
-    href: 'https://shop.lrworld.com/product/pl/pl/colostrum_liquid.html?productAlias=80361-599&casrnc=8e7b7',
-    image: colostrum,
-    price: '148,20 zł',
+    image: colostrum_liquid,
     description: 'Ten suplement diety to wysokiej jakości produkt na bazie colostrum, który wspiera naturalną odporność oraz regenerację komórek. Pozyskiwany od europejskich krów, jest odtłuszczony, pozbawiony kazeiny i wytwarzany w łagodnym, zimnym procesie, co pozwala zachować jego pełną wartość odżywczą. Nie zawiera żadnych dodatków, konserwantów ani barwników.',
     list:
       "Suplement diety wspiera naturalną odporność organizmu oraz regenerację komórek.\n" +
@@ -38,9 +39,7 @@ const products = [
     id: 2,
     lr_id: '80338-699',
     name: 'Super Omega Kapsułki',
-    href: 'https://shop.lrworld.com/product/pl/pl/super_omega__kapsulki.html?productAlias=80338-699&casrnc=f0fea',
-    image: omega,
-    price: '137,80 zł',
+    image: super_omega,
     description: 'Ten suplement diety to źródło wysokiej jakości kwasów Omega-3, pozyskiwanych z oleju rybiego pochodzącego z certyfikowanych, wolnych połowów. Dzięki wysokiemu stężeniu EPA i DHA wspiera zdrowie serca, prawidłowe funkcjonowanie mózgu oraz działa przeciwzapalnie. Idealny wybór dla osób dbających o układ krążenia i kondycję psychiczną.',
     list:
       "Suplement diety wspiera zdrowie serca i mózgu.\n" +
@@ -53,9 +52,7 @@ const products = [
     id: 3,
     lr_id: '80550-419',
     name: 'Protein Power Napój w proszku o smaku waniliowym',
-    href: 'https://shop.lrworld.com/product/pl/pl/protein_power_napoj_w_proszku_o_smaku_waniliowym.html?productAlias=80550-419&casrnc=f4d99',
-    image: protein,
-    price: '153,50 zł',
+    image: protein_power,
     description: 'Ten suplement diety został stworzony z myślą o osobach dążących do zwiększenia masy mięśniowej. Zawiera aż 80% białka pochodzącego z pięciu różnych źródeł, a także magnez i witaminę B6, które wspierają metabolizm białek i glikogenu. Dzięki swojej bogatej formule wspomaga syntezę białka, rozwój muskulatury oraz prawidłowe funkcjonowanie mięśni.',
     list:
       "Suplement diety wspiera utrzymanie i przyrost masy mięśniowej.\n" +
@@ -69,9 +66,7 @@ const products = [
     id: 4,
     lr_id: '80301-699',
     name: 'Vita Active Red Fruits',
-    href: 'https://shop.lrworld.com/product/pl/pl/vita_active_red_fruits.html?productAlias=80301-699&casrnc=6c0ca',
     image: vita_active,
-    price: '78,51 zł',
     description: 'Ten suplement diety to naturalne wsparcie dla procesu detoksykacji organizmu i ochrony komórek przed stresem oksydacyjnym. Zawiera koncentrat z 21 owoców i warzyw oraz dostarcza 100% dziennego zapotrzebowania na 10 kluczowych witamin w jednej łyżeczce. Dzięki obecności manganu i witaminy B6 wspiera funkcje wątroby, syntezę cysteiny oraz pomaga usuwać toksyny bez dodatku barwników.',
     list:
       "Suplement diety wspiera detoksykację organizmu oraz ochronę komórek przed stresem oksydacyjnym.\n" +
@@ -86,9 +81,7 @@ const products = [
     id: 5,
     lr_id: '20604-201',
     name: 'Aloe Vera MSM Wielofunkcyjny żel do ciała',
-    href: 'https://shop.lrworld.com/product/pl/pl/aloe_vera_msm_wielofunkcyjny_zel_do_ciala_aloe_vera.html?productAlias=20604-201&casrnc=2322f',
-    image: msm,
-    price: '100,40 zł',
+    image: msm_body_gel,
     description: 'Ten chłodzący żel do ciała z 60% zawartością Aloe Vera to idealne rozwiązanie dla zmęczonych mięśni i stawów. Dzięki zawartości MSM, ekstraktu z kory wierzby oraz liści mącznicy lekarskiej działa kojąco, wspomaga regenerację i przywraca komfort. Szybko się wchłania, nie pozostawiając tłustego filmu, a przy tym poprawia elastyczność skóry.',
     list:
       "Szybko wchłaniający się, chłodzący żel do ciała z 60% żelu Aloe Vera.\n" +
@@ -103,9 +96,7 @@ const products = [
     id: 6,
     lr_id: '80850-683',
     name: 'Aloe Vera Drinking Gel Active Freedom',
-    href: 'https://shop.lrworld.com/product/pl/pl/aloe_vera_drinking_gel_active_freedom.html?productAlias=80850-683&casrnc=49eea',
-    image: aloe_vera,
-    price: '126,80 zł',
+    image: aloe_vera_active_freedom,
     description: 'Ten suplement to kompleksowe wsparcie dla układu ruchu. Zawiera aż 88% żelu Aloe Vera oraz witaminę C, która wspiera produkcję kolagenu, a tym samym zdrowie chrząstki i kości. Wzbogacony o witaminę E, kolagen, glukozaminę i chondroitynę, pomaga utrzymać prawidłowy metabolizm energetyczny i dba o kondycję stawów. Idealny dla osób aktywnych i dbających o sprawność ruchową.',
     list:
       "Witamina C wspiera produkcję kolagenu dla prawidłowego funkcjonowania chrząstki i kości oraz pomaga utrzymać prawidłowy metabolizm energetyczny.\n" +
@@ -117,85 +108,73 @@ const products = [
 
 export default function AparatRuchu() {
   return (
-    <div className="bg-white">
-      <div className="mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4">
-        <div className="mx-auto max-w-2xl px-4 lg:max-w-none">
-          <div className="max-w-3xl">
-            <nav aria-label="Breadcrumb">
-              <ol role="list" className="flex items-center space-x-2">
-                {breadcrumbs.map((breadcrumb, breadcrumbIdx) => (
-                  <li key={breadcrumb.id}>
-                    <div className="flex items-center text-sm">
-                      <a href={breadcrumb.href} className="text-lime-600 hover:text-lime-500">
-                        {breadcrumb.name}
-                      </a>
-                      {breadcrumbIdx !== breadcrumbs.length - 1 ? (
-                        <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" className="ml-2 size-5 shrink-0 text-gray-300">
-                          <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
-                        </svg>
-                      ) : null}
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </nav>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Aparat ruchu</h1>
-            <p className="mt-4 text-gray-500">
-              Odkryj produkty wspierające zdrowie stawów, mięśni i odporności. Wybierz naturalne wsparcie dla swojego ciała i ciesz się aktywnym stylem życia każdego dnia!
-            </p>
-          </div>
-
-          <div className="mt-10 space-y-40 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16">
-            {products.map((product) => (
-              <div key={product.id} className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
-                <div className="mt-6 lg:col-span-7 lg:mt-0 xl:col-span-8">
-                  <div aria-labelledby="information-heading" className="mt-4">
-                      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{product.name}</h1>
-                    <div className="flex items-center">
-                      <p className="text-lg text-gray-900 sm:text-xl">{product.price}</p>
-                      <div className="ml-4 border-l border-gray-300 pl-4">
-                        <p className="ml text-sm text-gray-500">Ceny 30% taniej po dołączeniu do programu.</p>
-                      </div>
-                    </div>
-                    <div className="mt-10">
-                      <h2 className="text-sm font-medium text-gray-900">Opis</h2>
-
-                      <div className="mt-4 space-y-4 text-sm/6 text-gray-500">
-                        <p>{product.description}</p>
-                      </div>
-                    </div>
-
-                    <div className="mt-8 border-t border-gray-200 pt-8">
-                      <h2 className="text-sm font-medium text-gray-900">Naturalne Wsparcie</h2>
-
-                      <div className="mt-4">
-                        <ul role="list" className="list-disc space-y-1 pl-5 text-sm/6 text-gray-500 marker:text-gray-300">
-                          {product.list.split('\n').map((line, index) => (
-                            <li key={index} className="pl-2">{line}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="mt-6 flex items-center">
-                      <CheckIcon aria-hidden="true" className="size-5 shrink-0 text-green-500" />
-                      <p className="ml-2 text-sm text-gray-500">Dostępny na stronie
-                      <Link href="https://shop.lrworld.com/cms/PL/pl/?casrnc=a2409" target="_blank"
-                        className='inline-flex items-center gap-x-1.5 rounded-md bg-lime-600/60 px-1.5 py-0.5 text-sm font-medium text-white shadow-xs
-                        hover:bg-lime-500/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-600 mx-1'>
-                        LR
-                      </Link>
-                      pod numerem: {product.lr_id}</p>
-                    </div>
+    <Container className="bg-white py-24 sm:px-2 sm:py-32 lg:px-4">
+      <nav aria-label="Breadcrumb">
+        <ol role="list" className="flex items-center space-x-2">
+          {breadcrumbs.map((breadcrumb, breadcrumbIdx) => (
+            <li key={breadcrumb.id}>
+              <div className="flex items-center text-sm">
+                <Link href={breadcrumb.href} className="text-lime-600 hover:text-lime-500">
+                  {breadcrumb.name}
+                </Link>
+                {breadcrumbIdx !== breadcrumbs.length - 1 ? (
+                  <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" className="ml-2 size-5 shrink-0 text-gray-300">
+                    <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
+                  </svg>
+                ) : null}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </nav>
+      <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Aparat ruchu</h1>
+      <p className="mt-4 text-gray-500">
+        Odkryj produkty wspierające zdrowie stawów, mięśni i odporności. Wybierz naturalne wsparcie dla swojego ciała i ciesz się aktywnym stylem życia każdego dnia!
+      </p>
+      <div className="mt-10 space-y-40 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16">
+        {products.map((product) => (
+          <FadeIn key={product.id} className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
+            <div className="mt-6 lg:col-span-7 lg:mt-0 xl:col-span-8">
+              <div aria-labelledby="information-heading" className="mt-4">
+                <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{product.name}</h1>
+                <div className="mt-4">
+                  <div className="space-y-4 text-sm/6 text-gray-500">
+                    <p>{product.description}</p>
                   </div>
                 </div>
-                <div className="flex-auto h-full lg:col-span-5 xl:col-span-4">
-                  <Image alt={product.name} src={product.image} className="aspect-2/1 h-full rounded-lg object-contain" />
+
+                <div className="mt-8 border-t border-gray-200 pt-8">
+                  <h2 className="text-sm font-medium text-gray-900">Naturalne Wsparcie</h2>
+
+                  <div className="mt-4">
+                    <ul role="list" className="list-disc space-y-1 pl-5 text-sm/6 text-gray-500 marker:text-gray-300">
+                      {product.list.split('\n').map((line, index) => (
+                        <li key={index} className="pl-2">{line}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <div className="mt-6 flex items-center">
+                  <CheckIcon aria-hidden="true" className="size-5 shrink-0 text-green-500" />
+                  <p className="ml-2 text-sm text-gray-500">Dostępny na stronie
+                  <Link href="https://shop.lrworld.com/cms/PL/pl/?casrnc=a2409" target="_blank"
+                    className='inline-flex items-center gap-x-1.5 rounded-md bg-lime-600/60 px-1.5 py-0.5 text-sm font-medium text-white shadow-xs
+                    hover:bg-lime-500/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-600 mx-1'>
+                    LR
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                  </Link>
+                  pod numerem: {product.lr_id}</p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
+            <div className="flex-auto h-full lg:col-span-5 xl:col-span-4">
+              <Image alt={product.name} src={product.image} className="aspect-2/1 h-full rounded-lg object-contain" />
+            </div>
+          </FadeIn>
+        ))}
       </div>
-    </div>
+    </Container>
   )
 }

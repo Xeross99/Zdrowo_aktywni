@@ -180,12 +180,7 @@ export default function Sklep() {
               </div>
             </div>
             <div className="relative mt-16 h-80 lg:mt-8">
-              <Image
-                alt="App screenshot"
-                src={main}
-                width={1824}
-                height={1080}
-                className="absolute -left-28 -top-3 w-[57rem] max-w-none rounded-md"
+              <Image alt="App screenshot" src={main} width={1824} height={1080} className="absolute -left-28 -top-3 w-[57rem] max-w-none rounded-md"
               />
             </div>
           </div>

@@ -1,116 +1,123 @@
-'use client'
-
+import { FadeIn } from '@/components/FadeIn'
 import { Container } from '@/components/Container'
-import { CheckIcon, ShieldCheckIcon } from '@heroicons/react/24/solid'
-import { FadeIn } from "@/components/FadeIn"
-import aloe_vera from '@/images/sklep/kuracja_podstawowa/product_1.jpg'
-import liver_support from '@/images/sklep/kuracja_podstawowa/product_2.jpg'
+import { CheckIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import Image from 'next/image'
+import aloe_vera_active_freedom from '@/images/sklep/produkty/aloe_vera_active_freedom.jpg'
+import liver_support from '@/images/sklep/produkty/liver_support.jpg'
+
+export const metadata = {
+  title:       'Kuracja podstawowa',
+  description: 'Wzmocnij swój organizm dzięki suplementom wspierającym zdrowie stawów, kości, wątroby i metabolizmu. Postaw na naturalne składniki i kompleksowe wsparcie dla aktywnego i zrównoważonego stylu życia.',
+}
+
+const breadcrumbs = [
+  { id: 1, name: 'Sklep', href: '/sklep' },
+  { id: 2, name: 'Aparat ruchu', href: '/sklep/aparat_ruchu' },
+]
 
 const products = [
   {
     id: 1,
-    name: 'Aloe Vera Drinking Gel Active Freedom',
-    href: 'https://shop.lrworld.com/product/pl/pl/aloe_vera_drinking_gel_active_freedom.html?productAlias=80850-683&casrnc=49eea',
-    image: aloe_vera,
-    price: '126,80 zł',
-    description:
-      "Witamina C wspiera produkcję kolagenu dla prawidłowego funkcjonowania chrząstki i kości oraz pomaga utrzymać prawidłowy metabolizm energetyczny.\n" +
-      "• Dla Twojego aparatu ruchu: wspiera prawidłowy metabolizm energetyczny oraz utrzymanie chrząstki i kości\n" +
-      "• 88% żelu Aloe Vera\n" +
-      "• Z witaminą E, kolagenem, siarczanem glukozaminy, siarczanem chondroityny i składnikiem czynnym witaminą C",
-    breadcrumbs: [
-      { id: 1, name: 'Sklep', href: '/sklep' },
-      { id: 2, name: 'Kuracja podstawowa', href: '/sklep/kuracja_podstawowa' },
-    ]
+    lr_id: "80850-683",
+    name: "Aloe Vera Drinking Gel Active Freedom",
+    image: aloe_vera_active_freedom,
+    description: "Suplement diety w płynie o orzeźwiającym pomarańczowym smaku, zawierający 88% żelu Aloe Vera, witaminy C i E, kolagen, glukozaminę i chondroitynę. Wspiera aparat ruchu, funkcjonowanie kości i chrząstki, a także pomaga zmniejszyć zmęczenie.",
+    list:
+      "Wspiera prawidłowe funkcjonowanie chrząstki i kości dzięki zawartości witaminy C\n" +
+      "Pomaga utrzymać prawidłowy metabolizm energetyczny i zmniejsza uczucie zmęczenia\n" +
+      "Zawiera 88% czystego żelu Aloe Vera\n" +
+      "Wzbogacony o kolagen, siarczan glukozaminy i chondroityny\n" +
+      "Orzeźwiający, naturalny smak pomarańczowy\n" +
+      "Produkt znajduje się na Liście Kolońskiej - zminimalizowane ryzyko dopingu\n" +
+      "Suplement diety bezpieczny i przebadany przez niezależne laboratoria"
   },
   {
     id: 2,
-    name: 'LR LIFETAKT Liver Support',
-    href: 'https://shop.lrworld.com/product/pl/pl/lr_lifetakt_liver_support.html?productAlias=81330-97&casrnc=8b58c',
+    lr_id: "81330-97",
+    name: "LR LIFETAKT Liver Support",
     image: liver_support,
-    price: '119,90 zł',
-    description:
-      "Suplement diety wspiera detoksykację organizmu oraz ochronę komórek przed stresem oksydacyjnym.\n" +
-      "• Wspiera wątrobę w procesie usuwania toksyn i detoksykacji organizmu\n" +
-      "• Zawiera mangan, który chroni komórki przed stresem oksydacyjnym\n" +
-      "• Z witaminą B6, która wspiera syntezę aminokwasu siarkowego - cysteiny\n" +
-      "• Z ekstraktami roślinnymi: piołun, ostropest plamisty, chlorella oraz cholina i molibden",
-    breadcrumbs: []
+    description: "Suplement diety wspierający prawidłowe funkcjonowanie wątroby oraz ochronę komórek przed stresem oksydacyjnym. Zawiera cholinę, mangan, witaminę B6, molibden i ekstrakty roślinne: ostropest, piołun i chlorellę.",
+    list:
+      "Innowacyjna formuła wspierająca funkcje wątroby - metabolizm, detoksykacja i ochrona\n" +
+      "Cholina wspomaga prawidłowe funkcjonowanie wątroby\n" +
+      "Mangan chroni komórki przed stresem oksydacyjnym\n" +
+      "Witamina B6 wspiera syntezę cysteiny, ważnego aminokwasu siarkowego3\n" +
+      "Zawiera ekstrakty z ostropestu, piołunu i chlorelli\n" +
+      "Molibden wspiera metabolizm aminokwasów siarkowych\n" +
+      "Formuła działająca synergicznie dla wsparcia naturalnych procesów organizmu"
   }
 ]
 
 export default function KuracjaPodstawowa() {
   return (
-    <Container className="mt-16 sm:mt-32 pb-16 sm:pb-32">
-      {products.map((product) => (
-        <div key={product.id} className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 last:-mt-20">
-          <div className="lg:max-w-lg lg:self-end">
-            <nav aria-label="Breadcrumb">
-              <ol role="list" className="flex items-center space-x-2">
-                {product.breadcrumbs.map((breadcrumb, breadcrumbIdx) => (
-                  <li key={breadcrumb.id}>
-                    <div className="flex items-center text-sm">
-                      <a href={breadcrumb.href} className="font-medium text-gray-500 hover:text-gray-900">
-                        {breadcrumb.name}
-                      </a>
-                      {breadcrumbIdx !== product.breadcrumbs.length - 1 ? (
-                        <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" className="ml-2 size-5 shrink-0 text-gray-300">
-                          <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
-                        </svg>
-                      ) : null}
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </nav>
-            <div className="mt-4">
-              <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{product.name}</h1>
-            </div>
-            <div aria-labelledby="information-heading" className="mt-4">
-              <h2 id="information-heading" className="sr-only">
-                Product information
-              </h2>
-              <div className="flex items-center">
-                <p className="text-lg text-gray-900 sm:text-xl">{product.price}</p>
-                <div className="ml-4 border-l border-gray-300 pl-4">
-                  <p className="ml text-sm text-gray-500">Ceny 30% taniej po dołączeniu do programu.</p>
-                </div>
+    <Container className="bg-white py-24 sm:px-2 sm:py-32 lg:px-4">
+      <nav aria-label="Breadcrumb">
+        <ol role="list" className="flex items-center space-x-2">
+          {breadcrumbs.map((breadcrumb, breadcrumbIdx) => (
+            <li key={breadcrumb.id}>
+              <div className="flex items-center text-sm">
+                <Link href={breadcrumb.href} className="text-lime-600 hover:text-lime-500">
+                  {breadcrumb.name}
+                </Link>
+                {breadcrumbIdx !== breadcrumbs.length - 1 ? (
+                  <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" className="ml-2 size-5 shrink-0 text-gray-300">
+                    <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
+                  </svg>
+                ) : null}
               </div>
-              <div className="mt-4 space-y-6">
-                {product.description.split('\n').map((line, index) => (
-                  <p key={index} className="text-base text-gray-500">{line}</p>
-                ))}
-              </div>
-              <div className="mt-6 flex items-center">
-                <CheckIcon aria-hidden="true" className="size-5 shrink-0 text-green-500" />
-                <p className="ml-2 text-sm text-gray-500">Dostępny na stronie LR</p>
-              </div>
-            </div>
-          </div>
-          <FadeIn className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
-            <Image alt="" src={product.image} className="aspect-square w-full rounded-lg object-contain" />
-          </FadeIn>
-          <div className="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
-            <section aria-labelledby="options-heading">
-                <div className="mt-10">
-                  <Link href={product.href} target='_blank' rel="noreferrer nofollow" className="flex w-full items-center justify-center
-                  rounded-md border border-transparent bg-lime-600 px-8 py-3 text-base font-medium text-white hover:bg-lime-700 focus:ring-2
-                  focus:ring-lime-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-hidden">
-                    Kup teraz
-                  </Link>
-                </div>
-                <div className="mt-6 text-center">
-                  <div className="inline-flex text-base font-medium">
-                    <ShieldCheckIcon aria-hidden="true" className="mr-2 size-6 shrink-0 text-gray-400" />
-                    <span className="text-gray-500">Gwarancja oryginalności produktu</span>
+            </li>
+          ))}
+        </ol>
+      </nav>
+      <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Kuracja podstawowa</h1>
+      <p className="mt-4 text-gray-500">
+        Wzmocnij swój organizm dzięki suplementom wspierającym zdrowie stawów, kości, wątroby i metabolizmu. Postaw na naturalne składniki i kompleksowe wsparcie dla aktywnego i zrównoważonego stylu życia.
+      </p>
+      <div className="mt-10 space-y-40 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16">
+        {products.map((product) => (
+          <FadeIn key={product.id} className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
+            <div className="mt-6 lg:col-span-7 lg:mt-0 xl:col-span-8">
+              <div aria-labelledby="information-heading" className="mt-4">
+                <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{product.name}</h1>
+                <div className="mt-4">
+                  <div className="space-y-4 text-sm/6 text-gray-500">
+                    <p>{product.description}</p>
                   </div>
                 </div>
-            </section>
-          </div>
-        </div>
-      ))}
+
+                <div className="mt-8 border-t border-gray-200 pt-8">
+                  <h2 className="text-sm font-medium text-gray-900">Naturalne Wsparcie</h2>
+
+                  <div className="mt-4">
+                    <ul role="list" className="list-disc space-y-1 pl-5 text-sm/6 text-gray-500 marker:text-gray-300">
+                      {product.list.split('\n').map((line, index) => (
+                        <li key={index} className="pl-2">{line}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <div className="mt-6 flex items-center">
+                  <CheckIcon aria-hidden="true" className="size-5 shrink-0 text-green-500" />
+                  <p className="ml-2 text-sm text-gray-500">Dostępny na stronie
+                  <Link href="https://shop.lrworld.com/cms/PL/pl/?casrnc=a2409" target="_blank"
+                    className='inline-flex items-center gap-x-1.5 rounded-md bg-lime-600/60 px-1.5 py-0.5 text-sm font-medium text-white shadow-xs
+                    hover:bg-lime-500/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-600 mx-1'>
+                    LR
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                  </Link>
+                  pod numerem: {product.lr_id}</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex-auto h-full lg:col-span-5 xl:col-span-4">
+              <Image alt={product.name} src={product.image} className="aspect-2/1 h-full rounded-lg object-contain" />
+            </div>
+          </FadeIn>
+        ))}
+      </div>
     </Container>
   )
 }
