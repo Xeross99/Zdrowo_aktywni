@@ -16,7 +16,7 @@ export const metadata = {
 
 const breadcrumbs = [
   { id: 1, name: 'Sklep', href: '/sklep' },
-  { id: 2, name: 'Odporność', href: '/sklep/odpornosc' },
+  { id: 2, name: 'Kuracja odpornościowa', href: '/sklep/kuracja_odpornosciowa' },
 ]
 
 const products = [
@@ -142,7 +142,7 @@ export default function KuracjaOdpornosciowa() {
                   <CheckIcon aria-hidden="true" className="size-5 shrink-0 text-green-500" />
                   <p className="ml-2 text-sm text-gray-500">
                     Dostępny na stronie
-                    <Link href="https://shop.lrworld.com/cms/PL/pl/?casrnc=a2409" target="_blank"
+                    <Link href="https://shop.lrworld.com/home?PHP=B3fP%2FWdScdGDz97DkJxoJw%3D%3D" target="_blank"
                       className='inline-flex items-center gap-x-1.5 rounded-md bg-lime-600/60 px-1.5 py-0.5 text-sm font-medium text-white shadow-xs hover:bg-lime-500/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-600 mx-1'>
                       LR
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
