@@ -1,30 +1,48 @@
-import '@/styles/tailwind.css'
+import { Providers } from '@/app/providers'
+import { Layout } from '@/components/Layout'
 import { GoogleAnalytics } from '@next/third-parties/google'
-import Footer from '@/components/Footer'
-import { Navbar } from '@/components/Navbar'
+
+import '@/styles/tailwind.css'
 
 export const metadata = {
+  metadataBase: new URL('https://zdrowo-aktywni.pl'),
   title: {
     template: '%s - Zdrowo Aktywni',
     default: 'Zdrowo Aktywni - Aleksandra Kost',
   },
-  description: 'Znajdź inspiracje do zdrowego życia i aktywności fizycznej dzięki Zdrowo Aktywni.',
+  description:
+    'Aleksandra Kost — trenerka, dietetyczka, himalaistka. Nordic Walking, konsultacje dietetyczne, wykłady o biohackingu i zdrowym stylu życia.',
   author: 'Aleksandra Kost',
   creator: 'Michał Krzysteczko',
   alternates: {
-    sitemap: `https://zdrowo-aktywni.pl/sitemap.xml`
+    canonical: '/',
+    sitemap: '/sitemap.xml',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'pl_PL',
+    siteName: 'Zdrowo Aktywni',
+    title: 'Zdrowo Aktywni - Aleksandra Kost',
+    description:
+      'Aleksandra Kost — trenerka, dietetyczka, himalaistka. Nordic Walking, konsultacje dietetyczne, wykłady o biohackingu i zdrowym stylu życia.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zdrowo Aktywni - Aleksandra Kost',
+    description:
+      'Aleksandra Kost — trenerka, dietetyczka, himalaistka. Nordic Walking, konsultacje dietetyczne, wykłady o biohackingu.',
   },
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pl" className="h-full bg-white antialiased">
-      <body className="min-h-full">
-        <Navbar/>
-        <div className="w-full">
-          {children}
-        </div>
-        <Footer />
+    <html lang="pl" className="h-full antialiased" suppressHydrationWarning>
+      <body className="flex h-full bg-zinc-50 dark:bg-black">
+        <Providers>
+          <div className="flex w-full">
+            <Layout>{children}</Layout>
+          </div>
+        </Providers>
       </body>
       <GoogleAnalytics gaId="G-V65F7D42MS" />
     </html>

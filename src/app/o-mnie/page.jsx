@@ -1,15 +1,25 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-import { FadeIn, FadeInStagger } from "@/components/FadeIn"
+
 import { Container } from '@/components/Container'
-import { InstagramIcon, FacebookIcon, StravaIcon, TikTokIcon, MailIcon } from '@/components/Icons'
+import {
+  FacebookIcon,
+  InstagramIcon,
+  TikTokIcon,
+  StravaIcon,
+  MailIcon,
+} from '@/components/SocialIcons'
 import portraitImage from '@/images/sport/img3.jpg'
 
-export function SocialLink({ className, href, children, icon: Icon }) {
+function SocialLink({ className, href, children, icon: Icon }) {
   return (
     <li className={clsx(className, 'flex')}>
-      <Link href={href} target="_blank" className="group flex text-sm font-medium text-zinc-800 transition hover:text-lime-500">
+      <Link
+        href={href}
+        target="_blank"
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-lime-500 dark:text-zinc-200 dark:hover:text-lime-500"
+      >
         <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-lime-500" />
         <span className="ml-4">{children}</span>
       </Link>
@@ -18,81 +28,140 @@ export function SocialLink({ className, href, children, icon: Icon }) {
 }
 
 export const metadata = {
-  title:       'O mnie',
-  description: 'Nazywam się Aleksandra Kost, inspiruję do zdrowych zmian i lepszej przyszłości',
+  title: 'O mnie',
+  description:
+    'Nazywam się Aleksandra Kost, inspiruję do zdrowych zmian i lepszej przyszłości.',
 }
 
 export default function OMnie() {
   return (
-    <Container className="pt-16 sm:pt-32 pb-16 sm:pb-32 bg-white">
-      <FadeInStagger className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-        <FadeIn className="lg:pl-20">
+    <Container className="mt-16 sm:mt-32">
+      <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+        <div className="lg:pl-20">
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
               src={portraitImage}
               alt=""
               sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover"
+              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
             />
           </div>
-        </FadeIn>
+        </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
-            Nazywam się Aleksandra Kost, Inspiruję do zdrowych zmian i lepszej przyszłości
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+            Nazywam się Aleksandra Kost. Inspiruję do zdrowych zmian i lepszej
+            przyszłości.
           </h1>
-          <div className="mt-6 space-y-7 text-base text-zinc-600">
+          <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              Jako absolwentka Akademii Wychowania
-              Fizycznego w Katowicach łączę wiedzę i pasję, by inspirować ludzi
-              do pozytywnych zmian. Wierzę, że wszystko zaczyna się od nawyków -
-              małych, konsekwentnych kroków prowadzących do wielkich rezultatów.
+              Absolwentka <strong className="font-semibold text-zinc-800 dark:text-zinc-200">Akademii Wychowania Fizycznego w Katowicach</strong>.
+              Łączę wiedzę i pasję, by inspirować ludzi do pozytywnych zmian.
+              Wierzę, że wszystko zaczyna się od nawyków - małych, konsekwentnych
+              kroków prowadzących do wielkich rezultatów.
             </p>
+
+            <div className="rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40">
+              <p className="relative -rotate-1 inline-block text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+                <span className="absolute inset-0 rounded bg-lime-300/60 dark:bg-lime-500/25" />
+                <span className="relative px-1">Moje codzienne nawyki</span>
+              </p>
+              <ul className="mt-3 space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 flex-none rounded-full bg-lime-500" />
+                  Codziennie biegam co najmniej <strong className="font-semibold text-zinc-800 dark:text-zinc-200">5 kilometrów</strong>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 flex-none rounded-full bg-lime-500" />
+                  Piję aloes - nie tylko dla zdrowia, ale dla lepszej jakości życia
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 flex-none rounded-full bg-lime-500" />
+                  Biorę odpowiedzialność za swoje zdrowie i przyszłość
+                </li>
+              </ul>
+            </div>
+
             <p>
-              Moim celem jest prowadzenie ludzi w kierunku zdrowszego, pełniejszego
-              życia - pokazuję im, jak dobre nawyki, konsekwencja i dyscyplina mogą
-              zmieniać rzeczywistość. Wierzę, że jednym z najważniejszych życiowych
-              celów jest wykształcenie nawyków przynoszących zdrowie, szczęście i
-              radość z każdego dnia.
+              Jestem <strong className="font-semibold text-zinc-800 dark:text-zinc-200">himalaistką, triathlonistką i maratończykiem</strong>.
+              Nowe wyzwania traktuję jako szansę na rozwój i przełamywanie
+              własnych granic. Na Akademiach Zdrowia, które prowadzę, dzielę się
+              tym podejściem z innymi.
             </p>
+
             <p>
-              Codziennie piję aloes i biegam co najmniej 5 kilometrów- robię to nie
-              tylko dla zdrowia, ale dla lepszej jakości życia. Biorę odpowiedzialność
-              za swoje życie,  zdrowie i przyszłość. Na Akademiach Zdrowia które powadzę,
-              to przekazuję innym.  Jestem himalaistką, triathlonistką, maratończykiem.
-              Wiele jeszcze przede mną. Nowe wyzwania - traktuję jako szansę na rozwój
-              i przełamywanie własnych granic.
+              Każdy ma w sobie potencjał do wielkich rzeczy - potrzebuje jedynie
+              wsparcia, inspiracji i odpowiednich narzędzi. To właśnie staram się
+              robić w swojej pracy jako{' '}
+              <strong className="font-semibold text-zinc-800 dark:text-zinc-200">nauczyciel, dietetyk, instruktor i trener</strong>.
             </p>
+
+            <div className="rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40">
+              <p className="relative inline-block text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+                <span className="absolute inset-0 -skew-y-1 -rotate-1 rounded bg-lime-300/60 dark:bg-lime-500/25" />
+                <span className="relative px-1">Marzenia i cele</span>
+              </p>
+              <ul className="mt-3 space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 flex-none rounded-full bg-lime-500" />
+                  Przejście Głównego Szlaku Beskidzkiego
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 flex-none rounded-full bg-lime-500" />
+                  Maratony stolic Europy
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 flex-none rounded-full bg-lime-500" />
+                  Zdrowie, szczęście i dzielenie się pozytywną energią z innymi
+                </li>
+              </ul>
+            </div>
+
             <p>
-              Uważam, że każdy ma w sobie potencjał do wielkich rzeczy - potrzebuje jedynie
-              wsparcia, inspiracji i odpowiednich narzędzi. To właśnie staram się robić
-              w swojej pracy, dzieląc się wiedzą jako nauczyciel, dietetyk,  instruktor czy
-              trener. Poza pracą inwestuję w siebie i swoją rodzinę. Kocham książki, górskie
-              wędrówki, dobre jedzenie i ludzi. Moje marzenia? Hm… Główny Szlak Beskidzki,
-              zdobycie maratonów stolic Europy, niezależność finansowa, ale przede wszystkim
-              – zdrowie, szczęście oraz dzielenie się swoją pozytywną energią z innymi.
+              Poza pracą kocham <strong className="font-semibold text-zinc-800 dark:text-zinc-200">książki, górskie wędrówki, dobre jedzenie i ludzi</strong>.
+              Inwestuję w siebie i swoją rodzinę - bo najlepszą wersją siebie
+              stajemy się każdego dnia.
             </p>
           </div>
         </div>
-        <FadeIn className="lg:pl-20">
+        <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="https://www.facebook.com/aleksandra.kost.90" icon={FacebookIcon}>
+            <SocialLink
+              href="https://www.facebook.com/aleksandra.kost.90"
+              icon={FacebookIcon}
+            >
               Facebook
             </SocialLink>
-            <SocialLink href="https://www.instagram.com/flow_by_ola/" icon={InstagramIcon} className="mt-4">
+            <SocialLink
+              href="https://www.instagram.com/flow_by_ola/"
+              icon={InstagramIcon}
+              className="mt-4"
+            >
               Instagram
             </SocialLink>
-            <SocialLink href="https://www.tiktok.com/@aleksandra_kost_" icon={TikTokIcon} className="mt-4">
+            <SocialLink
+              href="https://www.tiktok.com/@aleksandra_kost_"
+              icon={TikTokIcon}
+              className="mt-4"
+            >
               TikTok
             </SocialLink>
-            <SocialLink href="https://www.strava.com/athletes/aleksandra_kost" icon={StravaIcon} className="mt-4">
+            <SocialLink
+              href="https://www.strava.com/athletes/aleksandra_kost"
+              icon={StravaIcon}
+              className="mt-4"
+            >
               Strava
             </SocialLink>
-            <SocialLink href="mailto:zdrowoaktywnii@gmail.com" icon={MailIcon} className="mt-8 border-t border-zinc-100 pt-8">
+            <SocialLink
+              href="mailto:zdrowoaktywnii@gmail.com"
+              icon={MailIcon}
+              className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
+            >
               zdrowoaktywnii@gmail.com
             </SocialLink>
           </ul>
-        </FadeIn>
-      </FadeInStagger>
+        </div>
+      </div>
     </Container>
   )
 }
