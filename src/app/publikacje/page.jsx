@@ -22,35 +22,21 @@ function Section({ title, children }) {
 
 const wyklady = [
   {
-    tytul: 'Biohacking — jak optymalizować swoje zdrowie',
+    tytul: 'Biohacking - jak optymalizować swoje zdrowie',
     data: '2024',
     miejsce: 'Szczegóły wkrótce',
     opis: 'Praktyczne wskazówki jak wykorzystać biohacking w codziennym życiu, aby poprawić energię, sen i wydajność.',
-  },
-  {
-    tytul: 'Zdrowe nawyki — mały krok, wielka zmiana',
-    data: '2023',
-    miejsce: 'Szczegóły wkrótce',
-    opis: 'Jak budować trwałe nawyki zdrowotne, które zmieniają życie. Od codziennego biegu po świadome odżywianie.',
-  },
-  {
-    tytul: 'Aktywność fizyczna a zdrowie psychiczne',
-    data: '2023',
-    miejsce: 'Szczegóły wkrótce',
-    opis: 'O wpływie regularnej aktywności fizycznej na samopoczucie, redukcję stresu i budowanie odporności psychicznej.',
   },
 ]
 
 const publikacje = [
   {
-    tytul: 'Publikacja — szczegóły wkrótce',
-    wydawnictwo: 'Szczegóły wkrótce',
-    rok: '2024',
-  },
-  {
-    tytul: 'Publikacja — szczegóły wkrótce',
-    wydawnictwo: 'Szczegóły wkrótce',
-    rok: '2023',
+    tytul:
+      'Aktywność i aloes - dwa nawyki, które zrewolucjonizują Twoje zdrowie',
+    wydawnictwo: 'Dwumiesięcznik „Żyj naturalnie", wydanie styczeń–luty 2025',
+    rok: '2025',
+    opis: 'Artykuł o prostych, ale skutecznych zmianach w codziennym stylu życia - regularnym ruchu i naturalnym wsparciu organizmu przez aloes. Praktyczne wskazówki, które można wdrożyć od razu, niezależnie od poziomu zaawansowania.',
+    href: '/artykul-aktywnosc-i-aloes.pdf',
   },
 ]
 
@@ -72,9 +58,6 @@ export default function Publikacje() {
                 <Card.Description>{wyklad.opis}</Card.Description>
               </Card>
             ))}
-            <p className="text-sm text-zinc-400 italic dark:text-zinc-500">
-              Szczegółowe informacje o wykładach zostaną uzupełnione wkrótce.
-            </p>
           </div>
         </Section>
 
@@ -82,16 +65,18 @@ export default function Publikacje() {
           <div className="space-y-8">
             {publikacje.map((pub, i) => (
               <Card key={i} as="article">
-                <Card.Eyebrow decorate>{pub.rok}</Card.Eyebrow>
-                <Card.Title as="h3">{pub.tytul}</Card.Title>
-                <Card.Description>
-                  {pub.wydawnictwo}
-                </Card.Description>
+                <Card.Eyebrow decorate>
+                  {pub.rok} · {pub.wydawnictwo}
+                </Card.Eyebrow>
+                <Card.Title as="h3" href={pub.href} target="_blank">
+                  {pub.tytul}
+                </Card.Title>
+                {pub.opis && (
+                  <Card.Description>{pub.opis}</Card.Description>
+                )}
+                {pub.href && <Card.Cta>Czytaj</Card.Cta>}
               </Card>
             ))}
-            <p className="text-sm text-zinc-400 italic dark:text-zinc-500">
-              Lista publikacji zostanie uzupełniona wkrótce.
-            </p>
           </div>
         </Section>
       </div>
