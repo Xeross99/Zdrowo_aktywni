@@ -22,10 +22,13 @@ function Section({ title, children }) {
 
 const wyklady = [
   {
-    tytul: 'Biohacking - jak optymalizować swoje zdrowie',
-    data: '2024',
-    miejsce: 'Szczegóły wkrótce',
-    opis: 'Praktyczne wskazówki jak wykorzystać biohacking w codziennym życiu, aby poprawić energię, sen i wydajność.',
+    tytul:
+      'Biohacking - jak świadome nawyki optymalizują metabolizm i polepszają jakość życia',
+    data: '7 marca 2026',
+    miejsce:
+      'III Festiwal Kultury Zdrowia „Pełnia zdrowia bez leków", Katowice',
+    opis: 'Wykład o świadomym „hakowaniu" własnego organizmu przez codzienne decyzje. O piramidzie zdrowia, metabolizmie jelit i naturalnych sposobach wsparcia organizmu - m.in. aloesie i dobrej jakości probiotykach.',
+    href: '/publikacje/biohacking-festiwal-zdrowia',
   },
 ]
 
@@ -33,7 +36,7 @@ const publikacje = [
   {
     tytul:
       'Aktywność i aloes - dwa nawyki, które zrewolucjonizują Twoje zdrowie',
-    wydawnictwo: 'Dwumiesięcznik „Żyj naturalnie", wydanie styczeń–luty 2025',
+    wydawnictwo: 'Dwumiesięcznik „Żyj naturalnie", wydanie styczeń-luty 2025',
     rok: '2025',
     opis: 'Artykuł o prostych, ale skutecznych zmianach w codziennym stylu życia - regularnym ruchu i naturalnym wsparciu organizmu przez aloes. Praktyczne wskazówki, które można wdrożyć od razu, niezależnie od poziomu zaawansowania.',
     href: '/artykul-aktywnosc-i-aloes.pdf',
@@ -54,8 +57,11 @@ export default function Publikacje() {
                 <Card.Eyebrow decorate>
                   {wyklad.data} · {wyklad.miejsce}
                 </Card.Eyebrow>
-                <Card.Title as="h3">{wyklad.tytul}</Card.Title>
+                <Card.Title as="h3" href={wyklad.href}>
+                  {wyklad.tytul}
+                </Card.Title>
                 <Card.Description>{wyklad.opis}</Card.Description>
+                {wyklad.href && <Card.Cta>Czytaj relację</Card.Cta>}
               </Card>
             ))}
           </div>
@@ -71,9 +77,7 @@ export default function Publikacje() {
                 <Card.Title as="h3" href={pub.href} target="_blank">
                   {pub.tytul}
                 </Card.Title>
-                {pub.opis && (
-                  <Card.Description>{pub.opis}</Card.Description>
-                )}
+                {pub.opis && <Card.Description>{pub.opis}</Card.Description>}
                 {pub.href && <Card.Cta>Czytaj</Card.Cta>}
               </Card>
             ))}
