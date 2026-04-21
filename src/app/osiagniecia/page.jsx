@@ -5,7 +5,7 @@ import { AnimatedNumber } from '@/components/AnimatedNumber'
 export const metadata = {
   title: 'Osiągnięcia',
   description:
-    'Wyprawy himalajskie, maratony, triatlony — sportowe osiągnięcia Aleksandry Kost.',
+    'Wyprawy himalajskie, maratony, triatlony - sportowe osiągnięcia Aleksandry Kost.',
 }
 
 function Section({ title, children }) {
@@ -30,21 +30,17 @@ const statystyki = [
 
 const wyprawy = [
   {
-    name: 'Wyprawa himalajska',
-    rok: '2023',
-    opis: 'Zdobywanie kolejnych szczytów w Himalajach — każda wyprawa to lekcja pokory i determinacji.',
-  },
-  {
-    name: 'Wyprawa himalajska',
-    rok: '2022',
-    opis: 'Góry uczą cierpliwości, wytrwałości i szacunku do natury. Każdy krok na wysokości to walka z własnymi ograniczeniami.',
+    name: 'Himalaje - Everest Base Camp i Kalapatthar',
+    rok: '2019',
+    opis: 'Wyprawa z 13-osobową grupą z Pszczyny do bazy u stóp Mount Everestu (5364 m) i zdobycie Kalapatthar (5643 m) - najwyższego punktu wyprawy.',
+    href: '/osiagniecia/himalaje-2019',
   },
 ]
 
 const starty = [
-  { rok: '2024', nazwa: 'Maraton — szczegóły wkrótce' },
-  { rok: '2023', nazwa: 'Triathlon — szczegóły wkrótce' },
-  { rok: '2022', nazwa: 'Maraton — szczegóły wkrótce' },
+  { rok: '2024', nazwa: 'Maraton - szczegóły wkrótce' },
+  { rok: '2023', nazwa: 'Triathlon - szczegóły wkrótce' },
+  { rok: '2022', nazwa: 'Maraton - szczegóły wkrótce' },
 ]
 
 const marzenia = [
@@ -83,13 +79,13 @@ export default function Osiagniecia() {
             {wyprawy.map((wyprawa, i) => (
               <Card key={i} as="article">
                 <Card.Eyebrow decorate>{wyprawa.rok}</Card.Eyebrow>
-                <Card.Title as="h3">{wyprawa.name}</Card.Title>
+                <Card.Title as="h3" href={wyprawa.href}>
+                  {wyprawa.name}
+                </Card.Title>
                 <Card.Description>{wyprawa.opis}</Card.Description>
+                {wyprawa.href && <Card.Cta>Czytaj relację</Card.Cta>}
               </Card>
             ))}
-            <p className="text-sm text-zinc-400 italic dark:text-zinc-500">
-              Szczegółowe informacje o wyprawach zostaną uzupełnione wkrótce.
-            </p>
           </div>
         </Section>
 
