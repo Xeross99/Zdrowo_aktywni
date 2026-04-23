@@ -22,13 +22,19 @@ function Section({ title, children }) {
 }
 
 const statystyki = [
-  { value: '15+', label: 'Maratony' },
-  { value: '10+', label: 'Triatlony' },
-  { value: '3', label: 'Wyprawy himalajskie' },
-  { value: '5000+', label: 'km rocznie' },
+  { value: '28', label: 'Szczytów Korony Gór Polski' },
+  { value: '4', label: 'Maratony' },
+  { value: '1', label: 'Triatlony' },
+  { value: '1', label: 'Wyprawy himalajskie' },
 ]
 
 const wyprawy = [
+  {
+    name: 'Korona Gór Polski - 28 szczytów',
+    rok: '2012 – 2026',
+    opis: '14-letnia przygoda zakończona w styczniu 2026 roku. Od pierwszych Rysów (2499 m) po ostatni Lubomir — 28 najwyższych szczytów polskich pasm górskich, zdobywanych w każdej porze roku.',
+    href: '/osiagniecia/korona-gor-polski',
+  },
   {
     name: 'Himalaje - Everest Base Camp i Kalapatthar',
     rok: '2019',

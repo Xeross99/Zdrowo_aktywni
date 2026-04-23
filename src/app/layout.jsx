@@ -3,6 +3,7 @@ import { Layout } from '@/components/Layout'
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 import '@/styles/tailwind.css'
+import 'react-photo-view/dist/react-photo-view.css'
 
 export const metadata = {
   metadataBase: new URL('https://zdrowo-aktywni.pl'),
