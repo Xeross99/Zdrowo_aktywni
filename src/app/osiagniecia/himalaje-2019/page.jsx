@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Container } from '@/components/Container'
+import { PhotoGallery, Zoomable } from '@/components/PhotoGallery'
 import dzieckoImage from '@/images/himalaje-2019/dziecko-balonik.jpeg'
 import mulyImage from '@/images/himalaje-2019/muly-juczne.jpeg'
 import panoramaImage from '@/images/himalaje-2019/panorama-gor.jpeg'
@@ -41,6 +42,7 @@ export default function Himalaje2019() {
             <ArrowLeftIcon className="h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400" />
           </Link>
 
+          <PhotoGallery>
           <article>
             <header className="flex flex-col">
               <p className="flex items-center text-base text-zinc-400 dark:text-zinc-500">
@@ -69,13 +71,15 @@ export default function Himalaje2019() {
             </header>
 
             <div className="mt-10 overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-800">
-              <Image
-                src={panoramaImage}
-                alt="Aleksandra Kost na tle panoramy ośnieżonych szczytów Himalajów"
-                sizes="(min-width: 768px) 42rem, 100vw"
-                className="aspect-4/3 w-full object-cover"
-                placeholder="blur"
-              />
+              <Zoomable image={panoramaImage}>
+                <Image
+                  src={panoramaImage}
+                  alt="Aleksandra Kost na tle panoramy ośnieżonych szczytów Himalajów"
+                  sizes="(min-width: 768px) 42rem, 100vw"
+                  className="aspect-4/3 w-full cursor-zoom-in object-cover transition hover:opacity-95"
+                  placeholder="blur"
+                />
+              </Zoomable>
             </div>
 
             <div className="mt-10 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
@@ -124,22 +128,26 @@ export default function Himalaje2019() {
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-800">
-                  <Image
-                    src={szczytImage}
-                    alt="Ośnieżony szczyt himalajski widziany z trasy wyprawy"
-                    sizes="(min-width: 640px) 20rem, 100vw"
-                    className="aspect-4/3 w-full object-cover"
-                    placeholder="blur"
-                  />
+                  <Zoomable image={szczytImage}>
+                    <Image
+                      src={szczytImage}
+                      alt="Ośnieżony szczyt himalajski widziany z trasy wyprawy"
+                      sizes="(min-width: 640px) 20rem, 100vw"
+                      className="aspect-4/3 w-full cursor-zoom-in object-cover transition hover:opacity-95"
+                      placeholder="blur"
+                    />
+                  </Zoomable>
                 </div>
                 <div className="overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-800">
-                  <Image
-                    src={bazaImage}
-                    alt="Aleksandra Kost w okolicach Everest Base Camp podczas opadów śniegu"
-                    sizes="(min-width: 640px) 20rem, 100vw"
-                    className="aspect-4/3 w-full object-cover"
-                    placeholder="blur"
-                  />
+                  <Zoomable image={bazaImage}>
+                    <Image
+                      src={bazaImage}
+                      alt="Aleksandra Kost w okolicach Everest Base Camp podczas opadów śniegu"
+                      sizes="(min-width: 640px) 20rem, 100vw"
+                      className="aspect-4/3 w-full cursor-zoom-in object-cover transition hover:opacity-95"
+                      placeholder="blur"
+                    />
+                  </Zoomable>
                 </div>
               </div>
 
@@ -212,13 +220,15 @@ export default function Himalaje2019() {
               </p>
 
               <div className="overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-800">
-                <Image
-                  src={mostImage}
-                  alt="Karawana zwierząt jucznych przechodząca przez wiszący most z modlitewnymi flagami"
-                  sizes="(min-width: 768px) 42rem, 100vw"
-                  className="aspect-4/3 w-full object-cover"
-                  placeholder="blur"
-                />
+                <Zoomable image={mostImage}>
+                  <Image
+                    src={mostImage}
+                    alt="Karawana zwierząt jucznych przechodząca przez wiszący most z modlitewnymi flagami"
+                    sizes="(min-width: 768px) 42rem, 100vw"
+                    className="aspect-4/3 w-full cursor-zoom-in object-cover transition hover:opacity-95"
+                    placeholder="blur"
+                  />
+                </Zoomable>
               </div>
 
               <div className="rounded-2xl border border-zinc-100 p-5 dark:border-zinc-700/40">
@@ -246,22 +256,26 @@ export default function Himalaje2019() {
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-800">
-                  <Image
-                    src={mulyImage}
-                    alt="Muły juczne niosące towary po himalajskim szlaku"
-                    sizes="(min-width: 640px) 20rem, 100vw"
-                    className="aspect-4/3 w-full object-cover"
-                    placeholder="blur"
-                  />
+                  <Zoomable image={mulyImage}>
+                    <Image
+                      src={mulyImage}
+                      alt="Muły juczne niosące towary po himalajskim szlaku"
+                      sizes="(min-width: 640px) 20rem, 100vw"
+                      className="aspect-4/3 w-full cursor-zoom-in object-cover transition hover:opacity-95"
+                      placeholder="blur"
+                    />
+                  </Zoomable>
                 </div>
                 <div className="overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-800">
-                  <Image
-                    src={dzieckoImage}
-                    alt="Aleksandra Kost z nepalskim dzieckiem bawiącym się zielonym balonikiem"
-                    sizes="(min-width: 640px) 20rem, 100vw"
-                    className="aspect-4/3 w-full object-cover"
-                    placeholder="blur"
-                  />
+                  <Zoomable image={dzieckoImage}>
+                    <Image
+                      src={dzieckoImage}
+                      alt="Aleksandra Kost z nepalskim dzieckiem bawiącym się zielonym balonikiem"
+                      sizes="(min-width: 640px) 20rem, 100vw"
+                      className="aspect-4/3 w-full cursor-zoom-in object-cover transition hover:opacity-95"
+                      placeholder="blur"
+                    />
+                  </Zoomable>
                 </div>
               </div>
 
@@ -293,6 +307,7 @@ export default function Himalaje2019() {
               </div>
             </div>
           </article>
+          </PhotoGallery>
         </div>
       </div>
     </Container>

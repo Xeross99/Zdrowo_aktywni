@@ -27,10 +27,22 @@ export function Footer() {
                 <NavLink href="/publikacje">Publikacje</NavLink>
                 <NavLink href="/kontakt">Kontakt</NavLink>
               </div>
-              <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Zdrowo-Aktywni. Wszelkie prawa
-                zastrzeżone.
-              </p>
+              <div className="flex flex-col items-center gap-1 text-sm text-zinc-400 md:items-end dark:text-zinc-500">
+                <p>
+                  &copy; {new Date().getFullYear()} Zdrowo-Aktywni. Wszelkie
+                  prawa zastrzeżone.
+                </p>
+                <p>
+                  Strona została wykonana przez{' '}
+                  <a
+                    href="https://krzysteczko-m.pl"
+                    target="_blank"
+                    className="transition hover:text-lime-500 dark:hover:text-lime-400"
+                  >
+                    Michała Krzysteczko
+                  </a>
+                </p>
+              </div>
             </div>
           </ContainerInner>
         </div>
