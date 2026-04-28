@@ -1,34 +1,60 @@
-# Transmit
+# Zdrowo Aktywni
 
-Transmit is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+Strona internetowa Aleksandry Kost — instruktorki i pasjonatki zdrowego, aktywnego stylu życia. Produkcyjnie dostępna pod adresem [zdrowo-aktywni.pl](https://zdrowo-aktywni.pl).
 
-## Getting started
+## Stack technologiczny
 
-To get started with this template, first install the npm dependencies:
+- **Framework:** Next.js 16 (App Router)
+- **Język:** JavaScript (JSX)
+- **Stylowanie:** Tailwind CSS v4 + PostCSS
+- **UI:** Headless UI, Heroicons, Framer Motion, React Aria, React Photo View
+- **Walidacja:** Valibot
+- **Analytics:** Google Analytics (`@next/third-parties`)
+
+## Uruchomienie lokalne
+
+Zainstaluj zależności:
 
 ```bash
 npm install
 ```
 
-Next, run the development server:
+Uruchom serwer deweloperski:
 
 ```bash
 npm run dev
 ```
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+Strona będzie dostępna pod [http://localhost:3000](http://localhost:3000).
 
-## Customizing
+## Skrypty
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+- `npm run dev` — serwer deweloperski
+- `npm run build` — build produkcyjny
+- `npm run lint` — ESLint
+- `npx prettier --check .` — sprawdzenie formatowania
 
-## License
+## Struktura projektu
 
-This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
+```
+src/
+  app/
+    (main)/page.jsx          — strona główna
+    o-mnie/                  — o mnie
+    kontakt/                 — kontakt
+    zajecia/                 — zajęcia
+    publikacje/              — publikacje (m.in. Biohacking Festiwal Zdrowia)
+    osiagniecia/             — osiągnięcia (Himalaje 2019, Korona Gór Polski)
+    layout.jsx               — root layout
+  components/                — komponenty współdzielone (Navbar, Footer, FadeIn, Container, …)
+  styles/                    — Tailwind CSS
+public/                      — zasoby statyczne (zdjęcia, ikony, sitemap)
+```
 
-## Learn more
+## Konwencje
 
-To learn more about the technologies used in this site template, see the following resources:
-
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
+- Wszystkie teksty w UI są po **polsku**.
+- Komponenty mają rozszerzenie `.jsx`.
+- Alias ścieżek: `@/` → `src/`.
+- Formatowanie: Prettier z pluginem `prettier-plugin-tailwindcss`.
+- Linting: ESLint z konfiguracją `next`.
