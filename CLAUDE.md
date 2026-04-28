@@ -10,7 +10,6 @@
 - **Language:** JavaScript (JSX), no TypeScript
 - **Styling:** Tailwind CSS v4 with PostCSS
 - **UI Libraries:** Headless UI, Heroicons, Framer Motion, React Aria
-- **Validation:** Valibot
 - **Analytics:** Google Analytics (via @next/third-parties)
 
 ## Commands

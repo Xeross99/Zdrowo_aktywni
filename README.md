@@ -8,7 +8,6 @@ Strona internetowa Aleksandry Kost — instruktorki i pasjonatki zdrowego, aktyw
 - **Język:** JavaScript (JSX)
 - **Stylowanie:** Tailwind CSS v4 + PostCSS
 - **UI:** Headless UI, Heroicons, Framer Motion, React Aria, React Photo View
-- **Walidacja:** Valibot
 - **Analytics:** Google Analytics (`@next/third-parties`)
 
 ## Uruchomienie lokalne
