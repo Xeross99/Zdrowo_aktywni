@@ -20,15 +20,33 @@
   </url>
   <url>
     <loc>https://zdrowo-aktywni.pl/osiagniecia</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://zdrowo-aktywni.pl/osiagniecia/himalaje-2019</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zdrowo-aktywni.pl/osiagniecia/korona-gor-polski</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://zdrowo-aktywni.pl/publikacje</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zdrowo-aktywni.pl/publikacje/biohacking-festiwal-zdrowia</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://zdrowo-aktywni.pl/kontakt</loc>
