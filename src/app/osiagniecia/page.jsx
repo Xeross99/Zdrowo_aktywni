@@ -25,7 +25,7 @@ const statystyki = [
   { value: '28', label: 'Szczytów Korony Gór Polski' },
   { value: '4', label: 'Maratony' },
   { value: '1', label: 'Triatlony' },
-  { value: '1', label: 'Wyprawy himalajskie' },
+  { value: '2', label: 'Wyprawy wysokogórskie' },
 ]
 
 const wyprawy = [
@@ -36,6 +36,12 @@ const wyprawy = [
     href: '/osiagniecia/korona-gor-polski',
   },
   {
+    name: 'Triglav (2863 m) - Alpy Julijskie',
+    rok: '2024',
+    opis: 'Pierwsza wyprawa z uprzężą i via ferratą - od doliny Kama, przez chatę Prgarca i Dom Planika, aż na najwyższy szczyt Słowenii.',
+    href: '/osiagniecia/triglav-2024',
+  },
+  {
     name: 'Himalaje - Everest Base Camp i Kalapatthar',
     rok: '2019',
     opis: 'Wyprawa z 13-osobową grupą z Pszczyny do bazy u stóp Mount Everestu (5364 m) i zdobycie Kalapatthar (5643 m) - najwyższego punktu wyprawy.',
@@ -44,9 +50,21 @@ const wyprawy = [
 ]
 
 const starty = [
-  { rok: '2024', nazwa: 'Maraton - szczegóły wkrótce' },
-  { rok: '2023', nazwa: 'Triathlon - szczegóły wkrótce' },
-  { rok: '2022', nazwa: 'Maraton - szczegóły wkrótce' },
+  {
+    rok: '22 maja 2022',
+    nazwa: 'Silesiaman Triathlon Pszczyna - II miejsce w kategorii kobiet z gminy Pszczyna',
+    opis: 'Pierwszy triathlon w życiu na dystansie 500 m pływania, 20 km roweru i 5 km biegu w Łące pod Pszczyną. Wzburzona wiatrem tafla jeziora, walka ze strachem w wodzie, a na mecie - II miejsce w kategorii kobiet z gminy Pszczyna i łzy radości.',
+    href: '/osiagniecia/silesiaman-2022',
+  },
+]
+
+const projekty = [
+  {
+    name: "Let's Run with PRO300_PROJECTdiscipline",
+    rok: 'Od 18 listopada 2021',
+    opis: 'Codzienna dyscyplina biegowa, która uruchomiła efekt domina - triathlon, maraton 3:56:38, firma LR i wewnętrzna przemiana. Projekt bez mety, bez zakończenia.',
+    href: '/osiagniecia/pro300',
+  },
 ]
 
 const marzenia = [
@@ -100,12 +118,28 @@ export default function Osiagniecia() {
             {starty.map((start, i) => (
               <Card key={i} as="article">
                 <Card.Eyebrow decorate>{start.rok}</Card.Eyebrow>
-                <Card.Title as="h3">{start.nazwa}</Card.Title>
+                <Card.Title as="h3" href={start.href}>
+                  {start.nazwa}
+                </Card.Title>
+                {start.opis && <Card.Description>{start.opis}</Card.Description>}
+                {start.href && <Card.Cta>Czytaj relację</Card.Cta>}
               </Card>
             ))}
-            <p className="text-sm text-zinc-400 italic dark:text-zinc-500">
-              Pełna lista startów zostanie uzupełniona wkrótce.
-            </p>
+          </div>
+        </Section>
+
+        <Section title="Projekty i drogi">
+          <div className="space-y-8">
+            {projekty.map((projekt, i) => (
+              <Card key={i} as="article">
+                <Card.Eyebrow decorate>{projekt.rok}</Card.Eyebrow>
+                <Card.Title as="h3" href={projekt.href}>
+                  {projekt.name}
+                </Card.Title>
+                <Card.Description>{projekt.opis}</Card.Description>
+                {projekt.href && <Card.Cta>Czytaj więcej</Card.Cta>}
+              </Card>
+            ))}
           </div>
         </Section>
 

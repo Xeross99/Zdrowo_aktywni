@@ -37,6 +37,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://zdrowo-aktywni.pl/osiagniecia/silesiaman-2022</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zdrowo-aktywni.pl/osiagniecia/triglav-2024</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zdrowo-aktywni.pl/osiagniecia/pro300</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://zdrowo-aktywni.pl/publikacje</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
