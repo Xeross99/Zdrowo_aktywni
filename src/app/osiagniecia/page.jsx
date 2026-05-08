@@ -42,6 +42,12 @@ const wyprawy = [
     href: '/osiagniecia/triglav-2024',
   },
   {
+    name: 'Hum (417 m) - rowerem przez wyspę Lastovo',
+    rok: '21.07.2022',
+    opis: 'Całodzienna wyprawa rowerowa szutrowymi drogami Parku Przyrody Lastovsko otočje na najwyższe wzniesienie chorwackiej wyspy. Skwar, pół litra wody i panorama Adriatyku, której nie da się zapomnieć.',
+    href: '/osiagniecia/lastovo-2022',
+  },
+  {
     name: 'Himalaje - Everest Base Camp i Kalapatthar',
     rok: '2019',
     opis: 'Wyprawa z 13-osobową grupą z Pszczyny do bazy u stóp Mount Everestu (5364 m) i zdobycie Kalapatthar (5643 m) - najwyższego punktu wyprawy.',
@@ -52,7 +58,8 @@ const wyprawy = [
 const starty = [
   {
     rok: '22 maja 2022',
-    nazwa: 'Silesiaman Triathlon Pszczyna - II miejsce w kategorii kobiet z gminy Pszczyna',
+    nazwa:
+      'Silesiaman Triathlon Pszczyna - II miejsce w kategorii kobiet z gminy Pszczyna',
     opis: 'Pierwszy triathlon w życiu na dystansie 500 m pływania, 20 km roweru i 5 km biegu w Łące pod Pszczyną. Wzburzona wiatrem tafla jeziora, walka ze strachem w wodzie, a na mecie - II miejsce w kategorii kobiet z gminy Pszczyna i łzy radości.',
     href: '/osiagniecia/silesiaman-2022',
   },
@@ -121,7 +128,9 @@ export default function Osiagniecia() {
                 <Card.Title as="h3" href={start.href}>
                   {start.nazwa}
                 </Card.Title>
-                {start.opis && <Card.Description>{start.opis}</Card.Description>}
+                {start.opis && (
+                  <Card.Description>{start.opis}</Card.Description>
+                )}
                 {start.href && <Card.Cta>Czytaj relację</Card.Cta>}
               </Card>
             ))}
