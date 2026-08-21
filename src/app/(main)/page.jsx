@@ -51,6 +51,7 @@ function Photos() {
               <Image
                 src={image}
                 alt=""
+                priority
                 sizes="(min-width: 640px) 18rem, 11rem"
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -62,9 +63,9 @@ function Photos() {
   )
 }
 
-function StatCard({ value, label }) {
+function StatCard({ value, label, className = '' }) {
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6 text-center dark:border-zinc-700/40">
+    <div className={`rounded-2xl border border-zinc-100 p-6 text-center dark:border-zinc-700/40 ${className}`}>
       <dd className="text-3xl font-bold text-lime-500">{value}</dd>
       <dt className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{label}</dt>
     </div>
@@ -125,7 +126,7 @@ export default function Home() {
           <div className="flex flex-col gap-16">
             <ActivityCard
               title="Nordic Walking"
-              description="Grupowe zajęcia nordic walking w pięknych lokalizacjach. Dla każdego, niezależnie od wieku i kondycji."
+              description="Zajęcia grupowe i indywidualne nordic walking w pięknych lokalizacjach. Dla każdego, niezależnie od wieku i kondycji."
               href="/zajecia"
             />
             <ActivityCard
@@ -143,14 +144,16 @@ export default function Home() {
             <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
               <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
                 <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="h-6 w-6 flex-none">
-                  <path d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500" />
+                  <path d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0" className="stroke-zinc-400 dark:stroke-zinc-500" />
                 </svg>
                 <span className="ml-3">Osiągnięcia</span>
               </h2>
-              <div className="mt-6 grid grid-cols-3 gap-4">
-                <StatCard value="15+" label="Maratony" />
-                <StatCard value="10+" label="Triatlony" />
-                <StatCard value="3" label="Himalaje" />
+              <div className="mt-6 grid grid-cols-2 gap-4">
+                <StatCard value="4" label="Maratony" />
+                <StatCard value="3" label="Półmaratony" />
+                <StatCard value="30+" label="Biegów różnych" />
+                <StatCard value="5" label="Biegów górskich" />
+                <StatCard value="1" label="Triathlon" className="col-span-2" />
               </div>
               <Link
                 href="/osiagniecia"

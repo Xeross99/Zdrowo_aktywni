@@ -22,10 +22,11 @@ function Section({ title, children }) {
 }
 
 const statystyki = [
-  { value: '28', label: 'Szczytów Korony Gór Polski' },
-  { value: '4', label: 'Maratony' },
-  { value: '1', label: 'Triatlony' },
-  { value: '2', label: 'Wyprawy wysokogórskie' },
+  { value: '4',   label: 'Maratony' },
+  { value: '3',   label: 'Półmaratony' },
+  { value: '30+', label: 'Biegów różnych' },
+  { value: '5',   label: 'Biegów górskich' },
+  { value: '1',   label: 'Triathlon', className: 'sm:col-span-2 lg:col-span-1' },
 ]
 
 const wyprawy = [
@@ -88,11 +89,11 @@ export default function Osiagniecia() {
     >
       <div className="space-y-20">
         <section>
-          <dl className="grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-5">
             {statystyki.map((stat) => (
               <div
                 key={stat.label}
-                className="flex flex-col bg-zinc-400/5 p-8 dark:bg-zinc-800/50"
+                className={`flex flex-col bg-zinc-400/5 p-8 dark:bg-zinc-800/50 ${stat.className ?? ''}`}
               >
                 <dt className="text-sm/6 font-semibold text-zinc-600 dark:text-zinc-400">
                   {stat.label}

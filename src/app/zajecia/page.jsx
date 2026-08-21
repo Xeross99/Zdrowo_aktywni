@@ -59,7 +59,7 @@ export default function Zajecia() {
       <div className="space-y-20">
         <Section title="Nordic Walking">
           <ServiceCard
-            title="Grupowe zajęcia nordic walking"
+            title="Zajęcia grupowe i indywidualne Nordic Walking"
             description="Nordic walking to doskonała forma aktywności dla każdego — niezależnie od wieku, kondycji czy doświadczenia. Zajęcia prowadzę w różnych lokalizacjach, łącząc ruch na świeżym powietrzu z nauką prawidłowej techniki marszu z kijkami."
             benefits={[
               'Poprawa kondycji i wydolności',
@@ -67,7 +67,7 @@ export default function Zajecia() {
               'Redukcja stresu i poprawa samopoczucia',
               'Zajęcia w plenerze, w pięknych lokalizacjach',
             ]}
-            note="Zajęcia odbywają się w różnych lokalizacjach — skontaktuj się po aktualny harmonogram."
+            note="Zajęcia odbywają się w różnych lokalizacjach - skontaktuj się po aktualny harmonogram."
             cta="Zapisz się"
           />
         </Section>

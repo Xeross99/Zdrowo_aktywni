@@ -37,7 +37,7 @@ export function Footer() {
                   <a
                     href="https://krzysteczko-m.pl"
                     target="_blank"
-                    className="transition hover:text-lime-500 dark:hover:text-lime-400"
+                    className="text-lime-400 transition hover:text-lime-500 dark:text-lime-400 dark:hover:text-lime-300"
                   >
                     Michała Krzysteczko
                   </a>
