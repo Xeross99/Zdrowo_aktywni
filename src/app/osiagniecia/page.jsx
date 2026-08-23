@@ -23,7 +23,7 @@ function Section({ title, children }) {
 
 const statystyki = [
   { value: '4',   label: 'Maratony' },
-  { value: '3',   label: 'Półmaratony' },
+  { value: '20',  label: 'Półmaratony' },
   { value: '30+', label: 'Biegów różnych' },
   { value: '5',   label: 'Biegów górskich' },
   { value: '1',   label: 'Triathlon', className: 'sm:col-span-2 lg:col-span-1' },

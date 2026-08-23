@@ -22,6 +22,13 @@ function Section({ title, children }) {
 
 const wyklady = [
   {
+    tytul: 'Małe zmiany - wielkie efekty. Cykl spotkań Akademii Zdrowia',
+    data: '28 maja 2026',
+    miejsce: 'Kawiarenka „Betania”, Studzionka',
+    opis: 'Trzy cykliczne spotkania wprowadzające w biohacking w prosty sposób, bez skomplikowanych teorii. O metabolizmie, równowadze kwasowo-zasadowej i insulinooporności - z praktycznym testem pH organizmu i omówieniem okna żywieniowego, regeneracji oraz odżywiania komórkowego.',
+    href: '/publikacje/akademia-zdrowia-betania-studzionka',
+  },
+  {
     tytul:
       'Biohacking - jak świadome nawyki optymalizują metabolizm i polepszają jakość życia',
     data: '7 marca 2026',
@@ -29,6 +36,27 @@ const wyklady = [
       'III Festiwal Kultury Zdrowia „Pełnia zdrowia bez leków", Katowice',
     opis: 'Wykład o świadomym „hakowaniu" własnego organizmu przez codzienne decyzje. O piramidzie zdrowia, metabolizmie jelit i naturalnych sposobach wsparcia organizmu - m.in. aloesie i dobrej jakości probiotykach.',
     href: '/publikacje/biohacking-festiwal-zdrowia',
+  },
+  {
+    tytul: 'Sprawny metabolizm kluczem do sukcesu',
+    data: '18 lutego 2026',
+    miejsce: 'Ośrodek Kultury i Sportu w Gaszowicach',
+    opis: 'Prelekcja dla mieszkańców Gaszowic o tym, jak zadbać o zdrowie od wewnątrz - o metabolizmie i najlepszych rozwiązaniach na poprawę zdrowia i samopoczucia. Uczestnicy mogli nieodpłatnie sprawdzić parametry swojego ciała: nawodnienie, tłuszcz wisceralny, masę mięśniową i kostną.',
+    href: '/publikacje/akademia-zdrowia-okis-gaszowice',
+  },
+  {
+    tytul: 'Akademia Zdrowia - cykl spotkań o świadomym budowaniu zdrowia',
+    data: '7 stycznia 2026',
+    miejsce: 'Biblioteka w Jankowicach k. Pszczyny',
+    opis: 'Cykl spotkań otwarty wykładem o aloesie - jednym z najsilniej działających biologicznie darów natury. Kolejne tematy to równowaga kwasowo-zasadowa, stany zapalne i blokady metaboliczne, a uczestnicy mogli skorzystać z analizy składu ciała, pomiaru pH i analizy wellness.',
+    href: '/publikacje/akademia-zdrowia-biblioteka-jankowice',
+  },
+  {
+    tytul: 'Akademia Zdrowia z KGW Łyszczanki',
+    data: '23 kwietnia 2025',
+    miejsce: 'Koło Gospodyń Wiejskich Łyszczanki, Łyski',
+    opis: 'Spotkanie o tym, jak zadbać o zdrowie „od wewnątrz” - o budowaniu zdrowych nawyków, oczyszczaniu organizmu i dobrym samopoczuciu na co dzień. Z pomiarem pH organizmu, eksperymentem i degustacją aloesu.',
+    href: '/publikacje/akademia-zdrowia-kgw-lyszczanki',
   },
 ]
 

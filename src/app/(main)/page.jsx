@@ -150,7 +150,7 @@ export default function Home() {
               </h2>
               <div className="mt-6 grid grid-cols-2 gap-4">
                 <StatCard value="4" label="Maratony" />
-                <StatCard value="3" label="Półmaratony" />
+                <StatCard value="20" label="Półmaratony" />
                 <StatCard value="30+" label="Biegów różnych" />
                 <StatCard value="5" label="Biegów górskich" />
                 <StatCard value="1" label="Triathlon" className="col-span-2" />
