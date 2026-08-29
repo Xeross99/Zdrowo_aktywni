@@ -52,9 +52,9 @@ const wyklady = [
     href: '/publikacje/akademia-zdrowia-biblioteka-jankowice',
   },
   {
-    tytul: 'Akademia Zdrowia z KGW Łyszczanki',
+    tytul: 'Akademia Zdrowia z KGW Lyszczanki',
     data: '23 kwietnia 2025',
-    miejsce: 'Koło Gospodyń Wiejskich Łyszczanki, Łyski',
+    miejsce: 'Koło Gospodyń Wiejskich Lyszczanki, Lyski',
     opis: 'Spotkanie o tym, jak zadbać o zdrowie „od wewnątrz” - o budowaniu zdrowych nawyków, oczyszczaniu organizmu i dobrym samopoczuciu na co dzień. Z pomiarem pH organizmu, eksperymentem i degustacją aloesu.',
     href: '/publikacje/akademia-zdrowia-kgw-lyszczanki',
   },

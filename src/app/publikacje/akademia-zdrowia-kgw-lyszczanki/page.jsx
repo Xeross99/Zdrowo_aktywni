@@ -5,9 +5,9 @@ import { Container } from '@/components/Container'
 import spotkanieImage from '@/images/akademia-kgw-lyszczanki/spotkanie.jpg'
 
 export const metadata = {
-  title: 'Akademia Zdrowia z KGW Łyszczanki',
+  title: 'Akademia Zdrowia z KGW Lyszczanki',
   description:
-    'Relacja ze spotkania Akademii Zdrowia poprowadzonego przez Aleksandrę Kost dla Koła Gospodyń Wiejskich Łyszczanki w Łyskach - o zdrowiu „od wewnątrz”, zdrowych nawykach i oczyszczaniu organizmu.',
+    'Relacja ze spotkania Akademii Zdrowia poprowadzonego przez Aleksandrę Kost dla Koła Gospodyń Wiejskich Lyszczanki w Lyskach - o zdrowiu „od wewnątrz”, zdrowych nawykach i oczyszczaniu organizmu.',
 }
 
 function ArrowLeftIcon(props) {
@@ -40,25 +40,25 @@ export default function AkademiaZdrowiaKgwLyszczanki() {
             <header className="flex flex-col">
               <p className="flex items-center text-base text-zinc-400 dark:text-zinc-500">
                 <span className="mr-3 h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
-                23 kwietnia 2025 · KGW Łyszczanki, Łyski
+                23 kwietnia 2025 · KGW Lyszczanki, Lyski
               </p>
               <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-                Akademia Zdrowia z KGW Łyszczanki
+                Akademia Zdrowia z KGW Lyszczanki
               </h1>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                 23 kwietnia miałam przyjemność poprowadzić spotkanie Akademii
                 Zdrowia dla pań z{' '}
                 <strong className="font-semibold text-zinc-800 dark:text-zinc-200">
-                  Koła Gospodyń Wiejskich Łyszczanki
+                  Koła Gospodyń Wiejskich Lyszczanki
                 </strong>{' '}
-                w Łyskach.
+                w Lyskach.
               </p>
             </header>
 
             <div className="mt-10 overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-800">
               <Image
                 src={spotkanieImage}
-                alt="Aleksandra Kost podczas spotkania Akademii Zdrowia z KGW Łyszczanki w Łyskach"
+                alt="Aleksandra Kost podczas spotkania Akademii Zdrowia z KGW Lyszczanki w Lyskach"
                 sizes="(min-width: 768px) 42rem, 100vw"
                 className="w-full object-cover"
                 placeholder="blur"
@@ -113,7 +113,7 @@ export default function AkademiaZdrowiaKgwLyszczanki() {
                   rel="noopener noreferrer"
                   className="font-semibold text-lime-700 underline decoration-lime-500/40 underline-offset-4 transition hover:decoration-lime-500 dark:text-lime-400"
                 >
-                  KGW Łyszczanki
+                  KGW Lyszczanki
                 </a>
                 :
               </p>
