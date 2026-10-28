@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd'
 
 export const metadata = {
   title: 'Zajęcia',
@@ -56,6 +57,7 @@ export default function Zajecia() {
       title="Zajęcia i usługi"
       intro="Zadbaj o zdrowie z profesjonalnym wsparciem. Każda z moich usług to krok w stronę lepszego samopoczucia."
     >
+      <BreadcrumbJsonLd name={metadata.title} />
       <div className="space-y-20">
         <Section title="Nordic Walking">
           <ServiceCard

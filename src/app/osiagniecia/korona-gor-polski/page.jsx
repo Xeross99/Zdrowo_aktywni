@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { PhotoGallery, Zoomable } from '@/components/PhotoGallery'
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd'
 import rudawiecImage from '@/images/korona-gor-polski/rudawiec.jpeg'
 import wielkaSowaImage from '@/images/korona-gor-polski/wielka-sowa.jpeg'
 import snieznikImage from '@/images/korona-gor-polski/snieznik.jpeg'
@@ -166,6 +167,10 @@ const szczyty = [
 export default function KoronaGorPolski() {
   return (
     <Container className="mt-16 sm:mt-32">
+      <BreadcrumbJsonLd
+        parent={{ name: 'Osiągnięcia', href: '/osiagniecia' }}
+        name={metadata.title}
+      />
       <div className="xl:relative">
         <div className="mx-auto max-w-2xl">
           <Link

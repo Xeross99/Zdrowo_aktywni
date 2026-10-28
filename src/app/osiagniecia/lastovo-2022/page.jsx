@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { PhotoGallery, Zoomable } from '@/components/PhotoGallery'
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd'
 import szutrowaDrogaImage from '@/images/lastovo-2022/szutrowa-droga.jpeg'
 import roweryPrzerwaImage from '@/images/lastovo-2022/rowery-przerwa.jpeg'
 import dwojkaSzlakImage from '@/images/lastovo-2022/dwojka-szlak.jpeg'
@@ -32,6 +33,10 @@ function ArrowLeftIcon(props) {
 export default function Lastovo2022() {
   return (
     <Container className="mt-16 sm:mt-32">
+      <BreadcrumbJsonLd
+        parent={{ name: 'Osiągnięcia', href: '/osiagniecia' }}
+        name={metadata.title}
+      />
       <div className="xl:relative">
         <div className="mx-auto max-w-2xl">
           <Link

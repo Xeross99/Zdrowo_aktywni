@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { PhotoGallery, Zoomable } from '@/components/PhotoGallery'
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd'
 import medalImage from '@/images/silesiaman-2022/medal.jpeg'
 import pucharImage from '@/images/silesiaman-2022/puchar.jpeg'
 import podiumImage from '@/images/silesiaman-2022/podium.jpeg'
@@ -32,6 +33,10 @@ function ArrowLeftIcon(props) {
 export default function Silesiaman2022() {
   return (
     <Container className="mt-16 sm:mt-32">
+      <BreadcrumbJsonLd
+        parent={{ name: 'Osiągnięcia', href: '/osiagniecia' }}
+        name={metadata.title}
+      />
       <div className="xl:relative">
         <div className="mx-auto max-w-2xl">
           <Link

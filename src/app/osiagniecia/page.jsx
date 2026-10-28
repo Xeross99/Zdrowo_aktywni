@@ -1,6 +1,7 @@
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { AnimatedNumber } from '@/components/AnimatedNumber'
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd'
 
 export const metadata = {
   title: 'Osiągnięcia',
@@ -87,6 +88,7 @@ export default function Osiagniecia() {
       title="Osiągnięcia"
       intro="Każdy szczyt to nowy początek. Każdy start to krok do przodu."
     >
+      <BreadcrumbJsonLd name={metadata.title} />
       <div className="space-y-20">
         <section>
           <dl className="grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-5">

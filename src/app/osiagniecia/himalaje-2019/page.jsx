@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { PhotoGallery, Zoomable } from '@/components/PhotoGallery'
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd'
 import dzieckoImage from '@/images/himalaje-2019/dziecko-balonik.jpeg'
 import mulyImage from '@/images/himalaje-2019/muly-juczne.jpeg'
 import panoramaImage from '@/images/himalaje-2019/panorama-gor.jpeg'
@@ -32,6 +33,10 @@ function ArrowLeftIcon(props) {
 export default function Himalaje2019() {
   return (
     <Container className="mt-16 sm:mt-32">
+      <BreadcrumbJsonLd
+        parent={{ name: 'Osiągnięcia', href: '/osiagniecia' }}
+        name={metadata.title}
+      />
       <div className="xl:relative">
         <div className="mx-auto max-w-2xl">
           <Link

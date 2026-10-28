@@ -3,6 +3,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd'
 import {
   FacebookIcon,
   InstagramIcon,
@@ -36,6 +37,7 @@ export const metadata = {
 export default function OMnie() {
   return (
     <Container className="mt-16 sm:mt-32">
+      <BreadcrumbJsonLd name={metadata.title} />
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
         <div className="lg:pl-20">
           <div className="max-w-xs px-2.5 lg:max-w-none">

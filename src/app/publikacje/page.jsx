@@ -1,5 +1,6 @@
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd'
 
 export const metadata = {
   title: 'Publikacje & Wykłady',
@@ -77,6 +78,7 @@ export default function Publikacje() {
       title="Publikacje & Wykłady"
       intro="Dzielę się wiedzą o zdrowiu, biohackingu i aktywnym stylu życia."
     >
+      <BreadcrumbJsonLd name={metadata.title} />
       <div className="space-y-20">
         <Section title="Wykłady">
           <div className="space-y-8">

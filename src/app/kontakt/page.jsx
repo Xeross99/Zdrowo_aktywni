@@ -3,6 +3,7 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd'
 import {
   FacebookIcon,
   InstagramIcon,
@@ -19,6 +20,7 @@ export const metadata = {
 export default function Kontakt() {
   return (
     <Container className="mt-16 sm:mt-32">
+      <BreadcrumbJsonLd name={metadata.title} />
       <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
         <div className="grid grid-cols-1 gap-10 py-16 lg:grid-cols-3">
           <div>

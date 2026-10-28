@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { PhotoGallery, Zoomable } from '@/components/PhotoGallery'
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd'
 import szczytWidokImage from '@/images/triglav-2024/szczyt-widok.jpeg'
 import viaFerrataImage from '@/images/triglav-2024/via-ferrata.jpeg'
 import podejscieImage from '@/images/triglav-2024/podejscie.jpeg'
@@ -35,6 +36,10 @@ function ArrowLeftIcon(props) {
 export default function Triglav2024() {
   return (
     <Container className="mt-16 sm:mt-32">
+      <BreadcrumbJsonLd
+        parent={{ name: 'Osiągnięcia', href: '/osiagniecia' }}
+        name={metadata.title}
+      />
       <div className="xl:relative">
         <div className="mx-auto max-w-2xl">
           <Link

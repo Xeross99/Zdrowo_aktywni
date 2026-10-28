@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { PhotoGallery, Zoomable } from '@/components/PhotoGallery'
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd'
 import pro300HeadbandImage from '@/images/pro300/pro300-headband.jpeg'
 import sunflowerImage from '@/images/pro300/sunflower.jpeg'
 import mogeWszystkoImage from '@/images/pro300/moge-wszystko.jpeg'
@@ -34,6 +35,10 @@ function ArrowLeftIcon(props) {
 export default function Pro300() {
   return (
     <Container className="mt-16 sm:mt-32">
+      <BreadcrumbJsonLd
+        parent={{ name: 'Osiągnięcia', href: '/osiagniecia' }}
+        name={metadata.title}
+      />
       <div className="xl:relative">
         <div className="mx-auto max-w-2xl">
           <Link

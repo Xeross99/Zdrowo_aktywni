@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Container } from '@/components/Container'
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd'
 import plakatImage from '@/images/akademia-gaszowice/plakat.jpg'
 
 export const metadata = {
@@ -26,6 +27,10 @@ function ArrowLeftIcon(props) {
 export default function AkademiaZdrowiaOkisGaszowice() {
   return (
     <Container className="mt-16 sm:mt-32">
+      <BreadcrumbJsonLd
+        parent={{ name: 'Publikacje & Wykłady', href: '/publikacje' }}
+        name={metadata.title}
+      />
       <div className="xl:relative">
         <div className="mx-auto max-w-2xl">
           <Link
